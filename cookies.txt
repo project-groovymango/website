@@ -1,0 +1,5 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.apollo.io	TRUE	/	FALSE	1999999999	__cf_bm	kVD4xmaDRiSKPWeN4zRMd2vQjz2N_atZhWu50wxLI14-1772552062-1.0.1.1-YoYfPmAm0W3k9otB0jeBzVb0q13YURRncpCA7d7wcAiPEA.Hc4gCxgG2lcL_cAEUNk34IMKZLJtR3KROsu0BGtjd7Ipmsy3i.1Lr0snsenw
+assets.apollo.io	TRUE	/	FALSE	1999999999	SameSite	None
+
