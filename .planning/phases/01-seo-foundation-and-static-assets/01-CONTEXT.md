@@ -6,7 +6,7 @@
 <domain>
 ## Phase Boundary
 
-Complete SEO metadata (meta tags, Open Graph, Twitter Cards, JSON-LD), self-hosted fonts, crawl infrastructure (sitemap.xml, robots.txt), and static-file bug fixes. All changes are in `index.html` and `public/` — zero React component changes.
+Complete SEO metadata (meta tags, Open Graph, Twitter Cards, JSON-LD), self-hosted fonts, crawl infrastructure (sitemap.xml, robots.txt), and static-file bug fixes. Primary changes are in `index.html` and `public/`. React source files (`content.js`, `ToolsMarquee.jsx`, `index.jsx`, `main.jsx`) are also modified for bug fixes (BUG-01, BUG-02) and font migration (PERF-01) per ROADMAP requirements.
 
 </domain>
 

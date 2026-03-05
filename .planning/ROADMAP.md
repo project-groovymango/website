@@ -25,7 +25,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Success Criteria** (what must be TRUE):
   1. Viewing page source of the deployed site shows complete meta tags (title, description, canonical), Open Graph tags, and Twitter Card tags in the HTML head
   2. Facebook Sharing Debugger and Twitter Card Validator render a rich preview with title, description, and image for the site URL
-  3. Google Rich Results Test validates the JSON-LD structured data (Organization, ProfessionalService, FAQPage) without errors
+  3. Google Rich Results Test validates the JSON-LD structured data (Organization schema only, per user decision) without errors
   4. Navigating to /website/sitemap.xml and /website/robots.txt returns valid files; favicon loads without 404; banner link and Planhat logo are fixed or removed
   5. Fonts render immediately on page load with no flash of unstyled text and no network requests to fonts.googleapis.com or fonts.gstatic.com visible in DevTools
 **Plans**: 2 plans
