@@ -1,38 +1,42 @@
-import {
-  StripeSvg, NotionSvg, HubSpotSvg, LinearSvg,
-  VercelSvg, FigmaSvg, SalesforceSvg, IntercomSvg
-} from "../components/Logos";
+import hubspot from "../assets/hubspot-logo.svg";
+import planhat from "../assets/planhat-logo.svg";
+import intercom from "../assets/intercom-logo.svg";
+import stripe from "../assets/stripe-logo.svg";
+import google from "../assets/google-logo.svg";
+import openai from "../assets/openai-logo.svg";
+import notion from "../assets/notion-logo.svg";
+import chargebee from "../assets/chargebee-logo.svg";
 
 export const CAL_LINK = "amin-laanaya-b5k6ne/30min";
 
 export const LOGOS = [
   {
-    Svg: StripeSvg, dot: true, delay: false,
+    src: hubspot, alt: "HubSpot", dot: true, delay: false,
     cs: {
       body: "Built a region-based lead routing system connected to their Stripe billing and calendar. Eliminated manual handoffs entirely and saved the ops team 6 hours every week.",
       person: { name: "Sarah Chen", role: "Head of Operations", emoji: "\u{1F469}", photo: null }
     }
   },
-  { Svg: NotionSvg, dot: false },
-  { Svg: HubSpotSvg, dot: false },
-  { Svg: LinearSvg, dot: false },
-  { Svg: VercelSvg, dot: false },
-  { Svg: FigmaSvg, dot: false },
+  { src: planhat, alt: "Planhat", dot: false },
+  { src: intercom, alt: "Intercom", dot: false },
+  { src: stripe, alt: "Stripe", dot: false },
+  { src: google, alt: "Google", dot: false },
+  { src: openai, alt: "OpenAI", dot: false },
   {
-    Svg: SalesforceSvg, dot: true, delay: true,
+    src: notion, alt: "Notion", dot: true, delay: true,
     cs: {
       body: "Connected Salesforce CRM, invoicing, and approval flows into a single automated pipeline. Reduced average deal-close time from 11 days down to 3.",
       person: { name: "Marcus Webb", role: "VP of Sales", emoji: "\u{1F468}", photo: null }
     }
   },
-  { Svg: IntercomSvg, dot: false },
+  { src: chargebee, alt: "Chargebee", dot: false },
 ];
 
 export const CASE_STUDIES = [
-  { title: "Round Robin", Logo: StripeSvg, desc: "Implemented region-based lead routing connected to their calendar. Saved ops 6 hours/week and eliminated manual handoff errors entirely.", visible: true },
-  { title: "Quote-to-Cash", Logo: FigmaSvg, desc: "Connected CRM, invoicing, and approval flows into a single automated pipeline. Reduced average deal-close time from 11 days to 3.", visible: true },
-  { title: "Platform Move", Logo: VercelSvg, desc: "Migrated 4 years of project history, client records, and billing data to a new platform over a single weekend. Zero data loss, zero downtime.", visible: true },
-  { title: "Support Agent", Logo: LinearSvg, desc: "Built a custom AI agent that handles first-line support, books demos, and logs everything back into HubSpot. Deflected 60% of inbound tickets in the first month.", visible: false },
+  { title: "Round Robin", logo: stripe, logoAlt: "Stripe", desc: "Implemented region-based lead routing connected to their calendar. Saved ops 6 hours/week and eliminated manual handoff errors entirely.", visible: true },
+  { title: "Quote-to-Cash", logo: hubspot, logoAlt: "HubSpot", desc: "Connected CRM, invoicing, and approval flows into a single automated pipeline. Reduced average deal-close time from 11 days to 3.", visible: true },
+  { title: "Platform Move", logo: notion, logoAlt: "Notion", desc: "Migrated 4 years of project history, client records, and billing data to a new platform over a single weekend. Zero data loss, zero downtime.", visible: true },
+  { title: "Support Agent", logo: intercom, logoAlt: "Intercom", desc: "Built a custom AI agent that handles first-line support, books demos, and logs everything back into HubSpot. Deflected 60% of inbound tickets in the first month.", visible: false },
 ];
 
 export const FAQ_ITEMS = [

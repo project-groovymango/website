@@ -41,6 +41,8 @@ export default function ToolsMarquee() {
               key={i}
               src={src}
               alt={alt}
+              loading="lazy"
+              decoding="async"
               style={height ? { height } : undefined}
             />
           )

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function FaqItem({ q, a, children }) {
+export default function Faq({ q, a, children }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="faq-item" onClick={() => setOpen(o => !o)}>
