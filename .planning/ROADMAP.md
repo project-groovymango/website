@@ -31,8 +31,8 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 2 plans
 
 Plans:
-- [ ] 01-01-PLAN.md -- SEO metadata, OG/Twitter tags, JSON-LD, sitemap, robots.txt, OG image, resource hints
-- [ ] 01-02-PLAN.md -- Self-hosted fonts (fontsource), Google Fonts removal, Planhat logo removal, banner link fix
+- [x] 01-01-PLAN.md -- SEO metadata, OG/Twitter tags, JSON-LD, sitemap, robots.txt, OG image, resource hints
+- [x] 01-02-PLAN.md -- Self-hosted fonts (fontsource), Google Fonts removal, Planhat logo removal, banner link fix
 
 ### Phase 2: Semantic HTML and Content Quality
 **Goal**: The page uses proper semantic HTML structure and keyword-optimized headings that improve both search ranking signals and accessibility
@@ -42,10 +42,10 @@ Plans:
   1. Inspecting the DOM shows a single h1 element and a logical h2/h3 hierarchy with no heading level gaps and no span-with-role-heading workarounds
   2. All footer links either navigate to a real destination or have been removed; no href="#" placeholders remain in the rendered page
   3. Page headings and body copy contain target niche keywords (iPaaS, Make.com, n8n, workflow automation) in natural language that a search engine would index
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] 02-01: TBD
+- [ ] 02-01-PLAN.md -- Semantic heading hierarchy, footer link cleanup, keyword optimization
 
 ### Phase 3: Runtime Performance and Hardening
 **Goal**: The site achieves strong Core Web Vitals scores through deferred third-party loading, optimized images, and defensive error handling
@@ -69,5 +69,5 @@ Phases execute in numeric order: 1 -> 2 -> 3
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. SEO Foundation and Static Assets | 2/2 | Complete   | 2026-03-05 |
-| 2. Semantic HTML and Content Quality | 0/? | Not started | - |
+| 2. Semantic HTML and Content Quality | 0/1 | In progress | - |
 | 3. Runtime Performance and Hardening | 0/? | Not started | - |
