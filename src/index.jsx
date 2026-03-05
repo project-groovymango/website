@@ -8,7 +8,7 @@ import Tooltip from "./components/Tooltip";
 import ToolsMarquee from "./components/ToolsMarquee";
 import CalErrorBoundary from "./components/CalErrorBoundary";
 import { LOGOS, FAQ_ITEMS, CASE_STUDIES, CAL_LINK } from "./data/content";
-import frogGif from "./assets/frog.gif";
+import frogWebp from "./assets/frog.webp";
 import { MakeLogo } from "./components/iPaaSLogos";
 import n8nLogo from "./assets/n8n-logo.svg";
 import aminPhoto from "./assets/amin.webp";
@@ -64,7 +64,7 @@ export default function App() {
               <div className="logo-row" style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                 <div style={{ display: "flex", alignItems: "flex-start", gap: "14px" }}>
                   <div className="logo">
-                    <img src={frogGif} alt="a2labs logo" style={{ width: "48px", height: "48px", position: "relative", top: "-6px" }} />
+                    <img src={frogWebp} alt="a2labs logo" style={{ width: "48px", height: "48px", position: "relative", top: "-6px" }} />
                   </div>
                   <h1>a2labs</h1>
                 </div>
@@ -291,7 +291,7 @@ export default function App() {
             </div>
           </div>
           <div className="a2-footer-frog">
-            <img src={frogGif} alt="a2labs logo" style={{ width: "96px", height: "96px" }} />
+            <img src={frogWebp} alt="a2labs logo" style={{ width: "96px", height: "96px" }} />
           </div>
         </div>
         <p className="a2-footer-copy">© 2026 Laanaya Enterprises, LLC — hosting made possible by a2labs.io</p>
