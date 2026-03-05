@@ -39,8 +39,8 @@ export const CASE_STUDIES = [
 
 export const FAQ_ITEMS = [
   { q: "What do you do in a nutshell?", a: "We build automations and help out with other headaches such as systems migrations or a cleanup, with a focus being on operational efficiency. Think of an automated region based lead assignment (round robin) with a control panel or a custom enrichment module within Clay as per your wishes." },
-  { q: "How do you make the automations?", a: "It's important for us that we can handover the automation in a way that you can take over in case we end up under a bus. We therefore try to stay as low-code as possible -- that being said, there have been cases where languages such as Python or Javascript have been needed, but this code is always kept within the automation itself and absolutely minimal." },
-  { q: "In which CRMs do we have experience in?", a: "We've mainly worked with customers using Hubspot in the past, that is our expertise. However, if it has legs an api - we can advise. In the end, all the applications are just an excel sheet (the backend) with a pretty interface." },
+  { q: "How do you make the automations?", a: "We primarily build in Make.com and n8n -- it's important for us that we can handover the automation in a way that you can take over in case we end up under a bus. We therefore try to stay as low-code as possible -- that being said, there have been cases where languages such as Python or Javascript have been needed, but this code is always kept within the automation itself and absolutely minimal." },
+  { q: "In which CRMs do we have experience in?", a: "We've mainly worked with customers using HubSpot in the past -- HubSpot automation is our bread and butter. However, if it has legs and an api - we can advise. In the end, all the applications are just an excel sheet (the backend) with a pretty interface." },
   { q: "Which tools have you worked with?", a: "Umm... well, enough to know that every SaaS app is just a database wearing a fancy coat -- but under here an indication. May have forgotten some." },
   { q: "How long does a typical project take?", a: "Depends" },
 ];

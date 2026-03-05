@@ -58,9 +58,9 @@ export default function App() {
                 </div>
               </div>
 
-              <p className="tagline">Automate, automate, automate — we're nerds who get high on things running efficiently. Help us get our fix, please.</p>
+              <p className="tagline">Workflow automation nerds who get high on things running efficiently. Help us get our fix, please.</p>
               <p className="description">
-                We have been told you have a problem — you can't see a manual process without wanting to automate it. Whether you're an exec drowning in repetitive tasks or a business sitting on untapped opportunities, we're the nerds you didn't know you needed. This was written by ChatGPT and it was so incredibly bad, we decided to keep it because it we like to suffer.
+                We have been told you have a problem — you can't see a manual process without wanting to automate it. Whether you're an exec drowning in repetitive tasks or a business sitting on untapped opportunities, we're the nerds you didn't know you needed. We build automations in Make.com and n8n, and occasionally write code when those tools tap out. This was written by ChatGPT and it was so incredibly bad, we decided to keep it because we like to suffer.
               </p>
               <div className="quote">
                 <p>"Yeahh... sometimes what they do is absolute wizardry."</p>
