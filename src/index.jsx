@@ -64,7 +64,7 @@ export default function App() {
               <div className="logo-row" style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                 <div style={{ display: "flex", alignItems: "flex-start", gap: "14px" }}>
                   <div className="logo">
-                    <img src={frogWebp} alt="a2labs logo" width={48} height={48} style={{ width: "48px", height: "48px", position: "relative", top: "-6px" }} />
+                    <img src={frogWebp} alt="a2labs logo" width={313} height={350} style={{ width: "48px", height: "auto", position: "relative", top: "-6px" }} />
                   </div>
                   <h1>a2labs</h1>
                 </div>
@@ -291,7 +291,7 @@ export default function App() {
             </div>
           </div>
           <div className="a2-footer-frog">
-            <img src={frogWebp} alt="a2labs logo" width={96} height={96} style={{ width: "96px", height: "96px" }} />
+            <img src={frogWebp} alt="a2labs logo" width={313} height={350} style={{ width: "96px", height: "auto" }} />
           </div>
         </div>
         <p className="a2-footer-copy">© 2026 Laanaya Enterprises, LLC — hosting made possible by a2labs.io</p>
