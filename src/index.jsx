@@ -64,7 +64,7 @@ export default function App() {
               <div className="logo-row" style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                 <div style={{ display: "flex", alignItems: "flex-start", gap: "14px" }}>
                   <div className="logo">
-                    <img src={frogWebp} alt="a2labs logo" style={{ width: "48px", height: "48px", position: "relative", top: "-6px" }} />
+                    <img src={frogWebp} alt="a2labs logo" width={48} height={48} style={{ width: "48px", height: "48px", position: "relative", top: "-6px" }} />
                   </div>
                   <h1>a2labs</h1>
                 </div>
@@ -92,7 +92,7 @@ export default function App() {
 
             <div className="social-proof" style={{ marginTop: "20px" }}>
               <div className="logo-grid">
-                {LOGOS.map(({ src, alt, dot, delay, cs }, i) => (
+                {LOGOS.map(({ src, alt, dot, delay, cs, width }, i) => (
                   <div
                     className={`brand-logo${dot ? " has-dot" : ""}`}
                     key={i}
@@ -100,7 +100,7 @@ export default function App() {
                     onMouseLeave={() => setTooltip(null)}
                   >
                     {dot && <span className={`pulse-dot${delay ? " delay" : ""}`} />}
-                    <img src={src} alt={alt} height={24} />
+                    <img src={src} alt={alt} width={width} height={24} />
                   </div>
                 ))}
               </div>
@@ -113,22 +113,22 @@ export default function App() {
               <p className="work-intro">Whilst our dear mothers still think we fix computers, this is what we actually do — if it has an API, we can help you automate or rethink the process.</p>
 
               <div className="case-list">
-                {visibleCases.map(({ title, logo, logoAlt, desc }) => (
+                {visibleCases.map(({ title, logo, logoAlt, logoWidth, desc }) => (
                   <div className="case-row" key={title}>
                     <div className="case-left">
                       <h3 className="case-title">{title}</h3>
-                      <div className="case-logo"><img src={logo} alt={logoAlt} height={14} /></div>
+                      <div className="case-logo"><img src={logo} alt={logoAlt} width={logoWidth} height={14} /></div>
                     </div>
                     <p className="case-desc">{desc}</p>
                   </div>
                 ))}
 
                 <div className={`case-more${workOpen ? " open" : ""}`}>
-                  {hiddenCases.map(({ title, logo, logoAlt, desc }) => (
+                  {hiddenCases.map(({ title, logo, logoAlt, logoWidth, desc }) => (
                     <div className="case-row" key={title}>
                       <div className="case-left">
                         <h3 className="case-title">{title}</h3>
-                        <div className="case-logo"><img src={logo} alt={logoAlt} height={14} /></div>
+                        <div className="case-logo"><img src={logo} alt={logoAlt} width={logoWidth} height={14} /></div>
                       </div>
                       <p className="case-desc">{desc}</p>
                     </div>
@@ -228,7 +228,7 @@ export default function App() {
               <div className="team-list">
                 <div className="team-card">
                   <div className="team-img-wrap">
-                    <img className="team-img" src={aminPhoto} alt="Amin Laanaya" loading="lazy" />
+                    <img className="team-img" src={aminPhoto} alt="Amin Laanaya" width={256} height={256} loading="lazy" />
                   </div>
                   <div className="team-info">
                     <h3 className="team-name">Amin Laanaya</h3>
@@ -249,7 +249,7 @@ export default function App() {
                     {q === "How do you make the automations?" && (
                       <div style={{ display: "flex", alignItems: "center", gap: 16, marginTop: 10, opacity: 0.5 }}>
                         <MakeLogo height={16} />
-                        <img src={n8nLogo} alt="n8n" style={{ height: 16 }} />
+                        <img src={n8nLogo} alt="n8n" width={30} height={16} style={{ height: 16 }} />
                       </div>
                     )}
                     {q === "Which tools have you worked with?" && <ToolsMarquee />}
@@ -291,7 +291,7 @@ export default function App() {
             </div>
           </div>
           <div className="a2-footer-frog">
-            <img src={frogWebp} alt="a2labs logo" style={{ width: "96px", height: "96px" }} />
+            <img src={frogWebp} alt="a2labs logo" width={96} height={96} style={{ width: "96px", height: "96px" }} />
           </div>
         </div>
         <p className="a2-footer-copy">© 2026 Laanaya Enterprises, LLC — hosting made possible by a2labs.io</p>

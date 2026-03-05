@@ -10,31 +10,31 @@ export const CAL_LINK = "amin-laanaya-b5k6ne/30min";
 
 export const LOGOS = [
   {
-    src: hubspot, alt: "HubSpot", dot: true, delay: false,
+    src: hubspot, alt: "HubSpot", width: 84, dot: true, delay: false,
     cs: {
       body: "Built a region-based lead routing system connected to their Stripe billing and calendar. Eliminated manual handoffs entirely and saved the ops team 6 hours every week.",
       person: { name: "Sarah Chen", role: "Head of Operations", emoji: "\u{1F469}", photo: null }
     }
   },
-  { src: intercom, alt: "Intercom", dot: false },
-  { src: stripe, alt: "Stripe", dot: false },
-  { src: google, alt: "Google", dot: false },
-  { src: openai, alt: "OpenAI", dot: false },
+  { src: intercom, alt: "Intercom", width: 101, dot: false },
+  { src: stripe, alt: "Stripe", width: 58, dot: false },
+  { src: google, alt: "Google", width: 74, dot: false },
+  { src: openai, alt: "OpenAI", width: 86, dot: false },
   {
-    src: notion, alt: "Notion", dot: true, delay: true,
+    src: notion, alt: "Notion", width: 67, dot: true, delay: true,
     cs: {
       body: "Connected Salesforce CRM, invoicing, and approval flows into a single automated pipeline. Reduced average deal-close time from 11 days down to 3.",
       person: { name: "Marcus Webb", role: "VP of Sales", emoji: "\u{1F468}", photo: null }
     }
   },
-  { src: chargebee, alt: "Chargebee", dot: false },
+  { src: chargebee, alt: "Chargebee", width: 77, dot: false },
 ];
 
 export const CASE_STUDIES = [
-  { title: "Round Robin", logo: stripe, logoAlt: "Stripe", desc: "Implemented region-based lead routing connected to their calendar. Saved ops 6 hours/week and eliminated manual handoff errors entirely.", visible: true },
-  { title: "Quote-to-Cash", logo: hubspot, logoAlt: "HubSpot", desc: "Connected CRM, invoicing, and approval flows into a single automated pipeline. Reduced average deal-close time from 11 days to 3.", visible: true },
-  { title: "Platform Move", logo: notion, logoAlt: "Notion", desc: "Migrated 4 years of project history, client records, and billing data to a new platform over a single weekend. Zero data loss, zero downtime.", visible: true },
-  { title: "Support Agent", logo: intercom, logoAlt: "Intercom", desc: "Built a custom AI agent that handles first-line support, books demos, and logs everything back into HubSpot. Deflected 60% of inbound tickets in the first month.", visible: false },
+  { title: "Round Robin", logo: stripe, logoAlt: "Stripe", logoWidth: 34, desc: "Implemented region-based lead routing connected to their calendar. Saved ops 6 hours/week and eliminated manual handoff errors entirely.", visible: true },
+  { title: "Quote-to-Cash", logo: hubspot, logoAlt: "HubSpot", logoWidth: 49, desc: "Connected CRM, invoicing, and approval flows into a single automated pipeline. Reduced average deal-close time from 11 days to 3.", visible: true },
+  { title: "Platform Move", logo: notion, logoAlt: "Notion", logoWidth: 39, desc: "Migrated 4 years of project history, client records, and billing data to a new platform over a single weekend. Zero data loss, zero downtime.", visible: true },
+  { title: "Support Agent", logo: intercom, logoAlt: "Intercom", logoWidth: 59, desc: "Built a custom AI agent that handles first-line support, books demos, and logs everything back into HubSpot. Deflected 60% of inbound tickets in the first month.", visible: false },
 ];
 
 export const FAQ_ITEMS = [

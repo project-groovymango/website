@@ -11,17 +11,17 @@ import n8n from "../assets/n8n-logo.svg";
 import { MakeLogo } from "./iPaaSLogos";
 
 const LOGOS = [
-  { src: hubspot, alt: "HubSpot" },
-  { src: intercom, alt: "Intercom" },
-  { src: google, alt: "Google" },
-  { src: stripe, alt: "Stripe" },
-  { src: openai, alt: "OpenAI" },
-  { src: notion, alt: "Notion" },
+  { src: hubspot, alt: "HubSpot", width: 56, height: 16 },
+  { src: intercom, alt: "Intercom", width: 68, height: 16 },
+  { src: google, alt: "Google", width: 49, height: 16 },
+  { src: stripe, alt: "Stripe", width: 38, height: 16 },
+  { src: openai, alt: "OpenAI", width: 57, height: 16 },
+  { src: notion, alt: "Notion", width: 45, height: 16 },
   { component: MakeLogo, alt: "Make" },
-  { src: n8n, alt: "n8n" },
-  { src: elevenlabs, alt: "ElevenLabs", height: 14 },
-  { src: chargebee, alt: "Chargebee" },
-  { src: partnerstack, alt: "PartnerStack" },
+  { src: n8n, alt: "n8n", width: 30, height: 16 },
+  { src: elevenlabs, alt: "ElevenLabs", width: 108, height: 14 },
+  { src: chargebee, alt: "Chargebee", width: 52, height: 16 },
+  { src: partnerstack, alt: "PartnerStack", width: 83, height: 16 },
 ];
 
 export default function ToolsMarquee() {
@@ -30,7 +30,7 @@ export default function ToolsMarquee() {
   return (
     <div className="marquee-wrap">
       <div className="marquee-track">
-        {items.map(({ src, alt, raster, height, component: Component }, i) =>
+        {items.map(({ src, alt, raster, width, height, component: Component }, i) =>
           Component ? (
             <span className="marquee-item marquee-svg" key={i}><Component height={16} /></span>
           ) : (
@@ -39,6 +39,8 @@ export default function ToolsMarquee() {
               key={i}
               src={src}
               alt={alt}
+              width={width}
+              height={height}
               loading="lazy"
               decoding="async"
               style={height ? { height } : undefined}
