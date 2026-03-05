@@ -20,8 +20,8 @@ Requirements for this milestone. Each maps to roadmap phases.
 
 - [x] **PERF-01**: Fonts (DM Sans, DM Mono) are self-hosted as WOFF2 with font-display: swap
 - [x] **PERF-02**: Google Fonts CDN links and preconnects are removed
-- [ ] **PERF-03**: Images have explicit width/height attributes to prevent CLS
-- [ ] **PERF-04**: Images are optimized (compressed, appropriate format)
+- [x] **PERF-03**: Images have explicit width/height attributes to prevent CLS
+- [x] **PERF-04**: Images are optimized (compressed, appropriate format)
 - [x] **PERF-05**: Cal.com embed loads on user interaction (CTA click), not on page mount
 - [x] **PERF-06**: Resource hints added (preload fonts, preconnect Cal.com)
 
@@ -87,8 +87,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SEO-06 | Phase 2 | Complete |
 | PERF-01 | Phase 1 | Complete |
 | PERF-02 | Phase 1 | Complete |
-| PERF-03 | Phase 3 | Pending |
-| PERF-04 | Phase 3 | Pending |
+| PERF-03 | Phase 3 | Complete |
+| PERF-04 | Phase 3 | Complete |
 | PERF-05 | Phase 3 | Complete |
 | PERF-06 | Phase 1 | Complete |
 | HTML-01 | Phase 2 | Complete |
