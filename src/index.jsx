@@ -91,14 +91,14 @@ export default function App() {
 
           <FadeIn>
             <section id="projects">
-              <p className="section-label"><span role="heading" aria-level="2">Previous projects</span></p>
+              <h2 className="section-label">Previous projects</h2>
               <p className="work-intro">Whilst our dear mothers still think we fix computers, this is what we actually do — if it has an API, we can help you automate or rethink the process.</p>
 
               <div className="case-list">
                 {visibleCases.map(({ title, logo, logoAlt, desc }) => (
                   <div className="case-row" key={title}>
                     <div className="case-left">
-                      <div className="case-title">{title}</div>
+                      <h3 className="case-title">{title}</h3>
                       <div className="case-logo"><img src={logo} alt={logoAlt} height={14} /></div>
                     </div>
                     <p className="case-desc">{desc}</p>
@@ -109,7 +109,7 @@ export default function App() {
                   {hiddenCases.map(({ title, logo, logoAlt, desc }) => (
                     <div className="case-row" key={title}>
                       <div className="case-left">
-                        <div className="case-title">{title}</div>
+                        <h3 className="case-title">{title}</h3>
                         <div className="case-logo"><img src={logo} alt={logoAlt} height={14} /></div>
                       </div>
                       <p className="case-desc">{desc}</p>
@@ -129,7 +129,7 @@ export default function App() {
 
           <FadeIn>
             <section>
-              <p className="section-label"><span role="heading" aria-level="2">How it works</span></p>
+              <h2 className="section-label">How it works</h2>
 
               <p className="toggle-intro">Two ways to work with us — depending on whether you already know what needs automating or need us to figure that out first.</p>
 
@@ -146,21 +146,21 @@ export default function App() {
                     <div className="step">
                       <span className="step-num">1</span>
                       <div>
-                        <div className="step-title">We audit your process</div>
+                        <h3 className="step-title">We audit your process</h3>
                         <div className="step-desc">We map out your entire workflow end-to-end, identify bottlenecks, and figure out what's worth automating.</div>
                       </div>
                     </div>
                     <div className="step">
                       <span className="step-num">2</span>
                       <div>
-                        <div className="step-title">Prioritize by impact</div>
+                        <h3 className="step-title">Prioritize by impact</h3>
                         <div className="step-desc">Not everything needs automating. We rank opportunities by time saved and complexity, then tackle the highest-impact ones first.</div>
                       </div>
                     </div>
                     <div className="step">
                       <span className="step-num">3</span>
                       <div>
-                        <div className="step-title">Build and hand over</div>
+                        <h3 className="step-title">Build and hand over</h3>
                         <div className="step-desc">We build the automations, connect your tools, document everything, and hand it over. You own it.</div>
                       </div>
                     </div>
@@ -170,21 +170,21 @@ export default function App() {
                     <div className="step">
                       <span className="step-num">1</span>
                       <div>
-                        <div className="step-title">Tell us the problem</div>
+                        <h3 className="step-title">Tell us the problem</h3>
                         <div className="step-desc">You come to us with a specific task or bottleneck. We get on a call and understand exactly what needs solving.</div>
                       </div>
                     </div>
                     <div className="step">
                       <span className="step-num">2</span>
                       <div>
-                        <div className="step-title">We scope and quote</div>
+                        <h3 className="step-title">We scope and quote</h3>
                         <div className="step-desc">Fixed price, no surprises. We define the deliverable, timeline, and what "done" looks like before we start.</div>
                       </div>
                     </div>
                     <div className="step">
                       <span className="step-num">3</span>
                       <div>
-                        <div className="step-title">Build and hand over</div>
+                        <h3 className="step-title">Build and hand over</h3>
                         <div className="step-desc">We build it, test it, connect your tools, and deliver a working automation — documented and maintainable.</div>
                       </div>
                     </div>
@@ -200,13 +200,14 @@ export default function App() {
 
           <FadeIn>
             <section>
+              <h2 className="section-label">The team</h2>
               <div className="team-list">
                 <div className="team-card">
                   <div className="team-img-wrap">
                     <img className="team-img" src={aminPhoto} alt="Amin Laanaya" loading="lazy" />
                   </div>
                   <div className="team-info">
-                    <div className="team-name">Amin Laanaya</div>
+                    <h3 className="team-name">Amin Laanaya</h3>
                     <div className="team-role">Automation engineer</div>
                     <div className="team-bio">Obsessive about process efficiency. Has automated everything from lead routing to his own morning routine. Probably has a workflow for this bio.</div>
                   </div>
@@ -217,7 +218,7 @@ export default function App() {
 
           <FadeIn>
             <section>
-              <p className="section-label"><span role="heading" aria-level="2">FAQ</span></p>
+              <h2 className="section-label">FAQ</h2>
               <div className="faq">
                 {FAQ_ITEMS.map(({ q, a }, i) => (
                   <Faq key={i} q={q} a={a}>
