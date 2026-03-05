@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function FaqItem({ q, a }) {
+export default function FaqItem({ q, a, children }) {
   const [open, setOpen] = useState(false);
   return (
     <div className="faq-item" onClick={() => setOpen(o => !o)}>
@@ -8,7 +8,7 @@ export default function FaqItem({ q, a }) {
         <span className={`faq-chevron${open ? " open" : ""}`}>&gt;</span>
         {q}
       </div>
-      <div className={`faq-a${open ? " open" : ""}`}>{a}</div>
+      <div className={`faq-a${open ? " open" : ""}`}>{a}{children}</div>
     </div>
   );
 }

@@ -36,12 +36,9 @@ export const CASE_STUDIES = [
 ];
 
 export const FAQ_ITEMS = [
-  { q: "What does a2labs do?", a: "We build custom automations that connect your tools and eliminate repetitive work. From CRM pipelines to invoicing to onboarding flows \u2014 if it's manual and repeatable, we automate it." },
-  { q: "Do I need to be technical?", a: "Not at all. You tell us what's slowing you down, we build the solution. No code, no dashboards to learn \u2014 it just works in the tools you already use." },
-  { q: "What tools do you integrate with?", a: "Anything with an API. Common ones include HubSpot, Salesforce, Stripe, Notion, Slack, Google Workspace, Linear, Intercom, Airtable, and Zapier \u2014 but we're not limited to these." },
-  { q: "How long does a typical project take?", a: "Most automations are live within 1\u20132 weeks. Complex multi-system builds can take 3\u20134 weeks. We scope everything upfront so there are no surprises." },
-  { q: "What's the pricing model?", a: "We work on a per-project basis with a fixed quote. No hourly billing, no retainers unless you want ongoing support. You know the cost before we start." },
-  { q: "Can you maintain automations after launch?", a: "Yes \u2014 we offer ongoing support plans for monitoring, updates, and new workflows. Most clients start with a project and move to a monthly plan once they see the ROI." },
-  { q: "What if my workflow is too niche?", a: "That's actually where we shine. Off-the-shelf tools break down with custom processes. We build to fit your exact workflow, not the other way around." },
-  { q: "How do we get started?", a: "Book a free 30-minute call. We'll map out your biggest time sinks, show you what's automatable, and give you a clear scope and quote \u2014 no commitment required." },
+  { q: "What do you do in a nutshell?", a: "We build automations and help out with other headaches such as systems migrations or a cleanup, with a focus being on operational efficiency. Think of an automated region based lead assignment (round robin) with a control panel or a custom enrichment module within Clay as per your wishes." },
+  { q: "How do you make the automations?", a: "It's important for us that we can handover the automation in a way that you can take over in case we end up under a bus. We therefore try to stay as low-code as possible -- that being said, there have been cases where languages such as Python or Javascript have been needed, but this code is always kept within the automation itself and absolutely minimal." },
+  { q: "In which CRMs do we have experience in?", a: "We've mainly worked with customers using Hubspot in the past, that is our expertise. However, if it has legs an api - we can advise. In the end, all the applications are just an excel sheet (the backend) with a pretty interface." },
+  { q: "Which tools have you worked with?", a: "Umm... well, enough to know that every SaaS app is just a database wearing a fancy coat -- but under here an indication. May have forgotten some." },
+  { q: "How long does a typical project take?", a: "Depends" },
 ];

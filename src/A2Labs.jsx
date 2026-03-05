@@ -5,8 +5,11 @@ import FadeIn from "./components/FadeIn";
 import FaqItem from "./components/FaqItem";
 import StepTitle from "./components/StepTitle";
 import CaseStudyTooltip from "./components/CaseStudyTooltip";
+import ToolsMarquee from "./components/ToolsMarquee";
 import { LOGOS, FAQ_ITEMS, CASE_STUDIES, CAL_LINK } from "./data/content";
 import frogGif from "./assets/frog.gif";
+import { MakeLogo } from "./components/iPaaSLogos";
+import n8nLogo from "./assets/n8n-logo.svg";
 import aminPhoto from "./assets/amin.webp";
 
 const calAttrs = {
@@ -177,7 +180,15 @@ export default function A2Labs() {
               <p className="section-label"><span role="heading" aria-level="2">FAQ</span></p>
               <div className="faq">
                 {FAQ_ITEMS.map(({ q, a }, i) => (
-                  <FaqItem key={i} q={q} a={a} />
+                  <FaqItem key={i} q={q} a={a}>
+                    {q === "How do you make the automations?" && (
+                      <div style={{ display: "flex", alignItems: "center", gap: 16, marginTop: 10, opacity: 0.5 }}>
+                        <MakeLogo height={16} />
+                        <img src={n8nLogo} alt="n8n" style={{ height: 16 }} />
+                      </div>
+                    )}
+                    {q === "Which tools have you worked with?" && <ToolsMarquee />}
+                  </FaqItem>
                 ))}
               </div>
             </section>
