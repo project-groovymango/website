@@ -56,10 +56,11 @@ Plans:
   2. All images have explicit width and height attributes in the HTML, and Lighthouse CLS score is below 0.1
   3. Images are served in optimized formats and compressed sizes; total image payload is measurably reduced from current baseline
   4. A Content-Security-Policy meta tag is present in index.html, and an error boundary wraps the Cal.com embed so that embed failures show a fallback instead of crashing the page
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 03-01: TBD
+- [ ] 03-01-PLAN.md -- Deferred Cal.com loading, error boundary, Content Security Policy meta tag
+- [ ] 03-02-PLAN.md -- Image optimization (frog.gif to WebP) and explicit width/height on all images
 
 ## Progress
 
@@ -70,4 +71,4 @@ Phases execute in numeric order: 1 -> 2 -> 3
 |-------|----------------|--------|-----------|
 | 1. SEO Foundation and Static Assets | 2/2 | Complete   | 2026-03-05 |
 | 2. Semantic HTML and Content Quality | 0/1 | In progress | - |
-| 3. Runtime Performance and Hardening | 0/? | Not started | - |
+| 3. Runtime Performance and Hardening | 0/2 | Not started | - |
