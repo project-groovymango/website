@@ -1,5 +1,4 @@
 import hubspot from "../assets/hubspot-logo.svg";
-import planhat from "../assets/planhat-logo.svg";
 import intercom from "../assets/intercom-logo.svg";
 import stripe from "../assets/stripe-logo.svg";
 import google from "../assets/google-logo.svg";
@@ -17,7 +16,6 @@ export const LOGOS = [
       person: { name: "Sarah Chen", role: "Head of Operations", emoji: "\u{1F469}", photo: null }
     }
   },
-  { src: planhat, alt: "Planhat", dot: false },
   { src: intercom, alt: "Intercom", dot: false },
   { src: stripe, alt: "Stripe", dot: false },
   { src: google, alt: "Google", dot: false },

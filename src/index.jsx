@@ -40,8 +40,8 @@ export default function App() {
       <Tooltip tooltip={tooltip} />
 
       <div className="banner">
-        Now released — free automation blueprints by a2labs{" "}
-        <a href="#" target="_blank" rel="noreferrer">click here →</a>
+        Book a free automation consultation —{" "}
+        <a href={`https://cal.com/${CAL_LINK}`} target="_blank" rel="noreferrer">schedule a call →</a>
       </div>
 
       <div className="container">

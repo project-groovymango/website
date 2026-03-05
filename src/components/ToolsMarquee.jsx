@@ -1,5 +1,4 @@
 import hubspot from "../assets/hubspot-logo.svg";
-import planhat from "../assets/planhat-logo.svg";
 import intercom from "../assets/intercom-logo.svg";
 import stripe from "../assets/stripe-logo.svg";
 import google from "../assets/google-logo.svg";
@@ -13,7 +12,6 @@ import { MakeLogo } from "./iPaaSLogos";
 
 const LOGOS = [
   { src: hubspot, alt: "HubSpot" },
-  { src: planhat, alt: "Planhat" },
   { src: intercom, alt: "Intercom" },
   { src: google, alt: "Google" },
   { src: stripe, alt: "Stripe" },
