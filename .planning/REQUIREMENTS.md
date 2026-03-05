@@ -18,8 +18,8 @@ Requirements for this milestone. Each maps to roadmap phases.
 
 ### Performance
 
-- [ ] **PERF-01**: Fonts (DM Sans, DM Mono) are self-hosted as WOFF2 with font-display: swap
-- [ ] **PERF-02**: Google Fonts CDN links and preconnects are removed
+- [x] **PERF-01**: Fonts (DM Sans, DM Mono) are self-hosted as WOFF2 with font-display: swap
+- [x] **PERF-02**: Google Fonts CDN links and preconnects are removed
 - [ ] **PERF-03**: Images have explicit width/height attributes to prevent CLS
 - [ ] **PERF-04**: Images are optimized (compressed, appropriate format)
 - [ ] **PERF-05**: Cal.com embed loads on user interaction (CTA click), not on page mount
@@ -34,8 +34,8 @@ Requirements for this milestone. Each maps to roadmap phases.
 
 ### Bug Fixes
 
-- [ ] **BUG-01**: Banner "click here" link points to real destination or is removed
-- [ ] **BUG-02**: Empty Planhat logo SVG is fixed or removed
+- [x] **BUG-01**: Banner "click here" link points to real destination or is removed
+- [x] **BUG-02**: Empty Planhat logo SVG is fixed or removed
 
 ## v2 Requirements
 
@@ -85,8 +85,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SEO-04 | Phase 1 | Complete |
 | SEO-05 | Phase 1 | Complete |
 | SEO-06 | Phase 2 | Pending |
-| PERF-01 | Phase 1 | Pending |
-| PERF-02 | Phase 1 | Pending |
+| PERF-01 | Phase 1 | Complete |
+| PERF-02 | Phase 1 | Complete |
 | PERF-03 | Phase 3 | Pending |
 | PERF-04 | Phase 3 | Pending |
 | PERF-05 | Phase 3 | Pending |
@@ -95,8 +95,8 @@ Which phases cover which requirements. Updated during roadmap creation.
 | HTML-02 | Phase 2 | Pending |
 | HTML-03 | Phase 3 | Pending |
 | HTML-04 | Phase 3 | Pending |
-| BUG-01 | Phase 1 | Pending |
-| BUG-02 | Phase 1 | Pending |
+| BUG-01 | Phase 1 | Complete |
+| BUG-02 | Phase 1 | Complete |
 
 **Coverage:**
 - v1 requirements: 18 total
