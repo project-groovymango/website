@@ -28,11 +28,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. Google Rich Results Test validates the JSON-LD structured data (Organization, ProfessionalService, FAQPage) without errors
   4. Navigating to /website/sitemap.xml and /website/robots.txt returns valid files; favicon loads without 404; banner link and Planhat logo are fixed or removed
   5. Fonts render immediately on page load with no flash of unstyled text and no network requests to fonts.googleapis.com or fonts.gstatic.com visible in DevTools
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 01-01: TBD
-- [ ] 01-02: TBD
+- [ ] 01-01-PLAN.md -- SEO metadata, OG/Twitter tags, JSON-LD, sitemap, robots.txt, OG image, resource hints
+- [ ] 01-02-PLAN.md -- Self-hosted fonts (fontsource), Google Fonts removal, Planhat logo removal, banner link fix
 
 ### Phase 2: Semantic HTML and Content Quality
 **Goal**: The page uses proper semantic HTML structure and keyword-optimized headings that improve both search ranking signals and accessibility
@@ -68,6 +68,6 @@ Phases execute in numeric order: 1 -> 2 -> 3
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. SEO Foundation and Static Assets | 0/? | Not started | - |
+| 1. SEO Foundation and Static Assets | 0/2 | Not started | - |
 | 2. Semantic HTML and Content Quality | 0/? | Not started | - |
 | 3. Runtime Performance and Hardening | 0/? | Not started | - |
