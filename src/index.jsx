@@ -21,6 +21,7 @@ const calAttrs = {
 export default function App() {
   const [workOpen, setWorkOpen] = useState(false);
   const [tooltip, setTooltip] = useState(null);
+  const [track, setTrack] = useState("audit");
 
 
   useEffect(() => {
@@ -129,30 +130,69 @@ export default function App() {
           <FadeIn>
             <section>
               <p className="section-label"><span role="heading" aria-level="2">How it works</span></p>
-              <div className="steps">
-                <div className="step">
-                  <span className="step-num">1</span>
-                  <div>
-                    <StepTitle hoverText="wat is je probleem">Tell us your problem</StepTitle>
-                    <div className="step-desc">We get on a call, map out your current process, and identify exactly where time is being wasted. No jargon, no fluff — just an honest look at what can be automated.</div>
-                  </div>
-                </div>
-                <div className="step">
-                  <span className="step-num">2</span>
-                  <div>
-                    <StepTitle>We scope and build</StepTitle>
-                    <div className="step-desc">We design the automation, connect your tools (HubSpot, CRM, calendar, whatever you're using), and build it. You'll see progress before we call it done.</div>
-                  </div>
-                </div>
-                <div className="step">
-                  <span className="step-num">3</span>
-                  <div>
-                    <StepTitle>You save time, we move on</StepTitle>
-                    <div className="step-desc">We hand it over, make sure it runs clean, and document everything. If something breaks, we're still here. Most clients come back with a second problem within two weeks.</div>
-                  </div>
-                </div>
+
+              <p className="toggle-intro">Two ways to work with us — depending on whether you already know what needs automating or need us to figure that out first.</p>
+
+              <div className="toggle-wrap">
+                <button className={`toggle-btn${track === "audit" ? " active" : ""}`} onClick={() => setTrack("audit")}>Process audit</button>
+                <button className={`toggle-btn${track === "problem" ? " active" : ""}`} onClick={() => setTrack("problem")}>Specific problem</button>
               </div>
-              <button className="cta-primary" {...calAttrs} style={{ marginTop: "32px", cursor: "pointer", border: "none" }}>
+
+              <div className="toggle-content">
+                <div className="toggle-pricing">{track === "audit" ? "Hourly" : "Project-based"}</div>
+
+                {track === "audit" ? (
+                  <div className="steps">
+                    <div className="step">
+                      <span className="step-num">1</span>
+                      <div>
+                        <div className="step-title">We audit your process</div>
+                        <div className="step-desc">We map out your entire workflow end-to-end, identify bottlenecks, and figure out what's worth automating.</div>
+                      </div>
+                    </div>
+                    <div className="step">
+                      <span className="step-num">2</span>
+                      <div>
+                        <div className="step-title">Prioritize by impact</div>
+                        <div className="step-desc">Not everything needs automating. We rank opportunities by time saved and complexity, then tackle the highest-impact ones first.</div>
+                      </div>
+                    </div>
+                    <div className="step">
+                      <span className="step-num">3</span>
+                      <div>
+                        <div className="step-title">Build and hand over</div>
+                        <div className="step-desc">We build the automations, connect your tools, document everything, and hand it over. You own it.</div>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="steps">
+                    <div className="step">
+                      <span className="step-num">1</span>
+                      <div>
+                        <div className="step-title">Tell us the problem</div>
+                        <div className="step-desc">You come to us with a specific task or bottleneck. We get on a call and understand exactly what needs solving.</div>
+                      </div>
+                    </div>
+                    <div className="step">
+                      <span className="step-num">2</span>
+                      <div>
+                        <div className="step-title">We scope and quote</div>
+                        <div className="step-desc">Fixed price, no surprises. We define the deliverable, timeline, and what "done" looks like before we start.</div>
+                      </div>
+                    </div>
+                    <div className="step">
+                      <span className="step-num">3</span>
+                      <div>
+                        <div className="step-title">Build and hand over</div>
+                        <div className="step-desc">We build it, test it, connect your tools, and deliver a working automation — documented and maintainable.</div>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              <button className="cta-primary" {...calAttrs} style={{ marginTop: "24px", cursor: "pointer", border: "none" }}>
                 Book a free 15-min call →
               </button>
             </section>
