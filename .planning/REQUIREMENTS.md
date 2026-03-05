@@ -22,15 +22,15 @@ Requirements for this milestone. Each maps to roadmap phases.
 - [x] **PERF-02**: Google Fonts CDN links and preconnects are removed
 - [ ] **PERF-03**: Images have explicit width/height attributes to prevent CLS
 - [ ] **PERF-04**: Images are optimized (compressed, appropriate format)
-- [ ] **PERF-05**: Cal.com embed loads on user interaction (CTA click), not on page mount
+- [x] **PERF-05**: Cal.com embed loads on user interaction (CTA click), not on page mount
 - [x] **PERF-06**: Resource hints added (preload fonts, preconnect Cal.com)
 
 ### HTML Quality
 
 - [x] **HTML-01**: Semantic heading hierarchy (real h1/h2/h3, no span[role=heading] hacks)
 - [x] **HTML-02**: Placeholder href="#" links in footer are fixed or removed
-- [ ] **HTML-03**: Content Security Policy added via meta tag
-- [ ] **HTML-04**: Error boundary wraps Cal.com embed to prevent white-screen crashes
+- [x] **HTML-03**: Content Security Policy added via meta tag
+- [x] **HTML-04**: Error boundary wraps Cal.com embed to prevent white-screen crashes
 
 ### Bug Fixes
 
@@ -89,12 +89,12 @@ Which phases cover which requirements. Updated during roadmap creation.
 | PERF-02 | Phase 1 | Complete |
 | PERF-03 | Phase 3 | Pending |
 | PERF-04 | Phase 3 | Pending |
-| PERF-05 | Phase 3 | Pending |
+| PERF-05 | Phase 3 | Complete |
 | PERF-06 | Phase 1 | Complete |
 | HTML-01 | Phase 2 | Complete |
 | HTML-02 | Phase 2 | Complete |
-| HTML-03 | Phase 3 | Pending |
-| HTML-04 | Phase 3 | Pending |
+| HTML-03 | Phase 3 | Complete |
+| HTML-04 | Phase 3 | Complete |
 | BUG-01 | Phase 1 | Complete |
 | BUG-02 | Phase 1 | Complete |
 
