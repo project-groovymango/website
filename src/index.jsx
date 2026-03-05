@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useRef } from "react";
 import "./styles/global.css";
 
 import FadeIn from "./components/FadeIn";
@@ -6,6 +6,7 @@ import Faq from "./components/Faq";
 import StepTitle from "./components/StepTitle";
 import Tooltip from "./components/Tooltip";
 import ToolsMarquee from "./components/ToolsMarquee";
+import CalErrorBoundary from "./components/CalErrorBoundary";
 import { LOGOS, FAQ_ITEMS, CASE_STUDIES, CAL_LINK } from "./data/content";
 import frogGif from "./assets/frog.gif";
 import { MakeLogo } from "./components/iPaaSLogos";
@@ -22,15 +23,25 @@ export default function App() {
   const [workOpen, setWorkOpen] = useState(false);
   const [tooltip, setTooltip] = useState(null);
   const [track, setTrack] = useState("audit");
+  const calInitRef = useRef(false);
+  const [calLoading, setCalLoading] = useState(false);
+  const [calError, setCalError] = useState(false);
 
-
-  useEffect(() => {
-    import("@calcom/embed-react").then(({ getCalApi }) =>
-      getCalApi({ namespace: "30min" }).then(cal =>
-        cal("ui", { hideEventTypeDetails: false, layout: "month_view" })
-      )
-    );
-  }, []);
+  async function initCal() {
+    if (calInitRef.current) return;
+    setCalLoading(true);
+    try {
+      const { getCalApi } = await import("@calcom/embed-react");
+      const cal = await getCalApi({ namespace: "30min" });
+      cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
+      calInitRef.current = true;
+    } catch (err) {
+      console.error("Cal.com embed failed to load:", err);
+      setCalError(true);
+    } finally {
+      setCalLoading(false);
+    }
+  }
 
   const visibleCases = CASE_STUDIES.filter(c => c.visible);
   const hiddenCases = CASE_STUDIES.filter(c => !c.visible);
@@ -39,6 +50,7 @@ export default function App() {
     <>
       <Tooltip tooltip={tooltip} />
 
+      <CalErrorBoundary>
       <div className="banner">
         Book a free automation consultation —{" "}
         <a href={`https://cal.com/${CAL_LINK}`} target="_blank" rel="noreferrer">schedule a call →</a>
@@ -68,9 +80,15 @@ export default function App() {
               </div>
             </div>
 
-            <button className="cta-primary" {...calAttrs} style={{ cursor: "pointer", border: "none" }}>
-              Book a free 15-min call →
-            </button>
+            {calError ? (
+              <a href={`https://cal.com/${CAL_LINK}`} target="_blank" rel="noreferrer" className="cta-primary" style={{ cursor: "pointer", border: "none" }}>
+                Book a free 15-min call (opens Cal.com) &rarr;
+              </a>
+            ) : (
+              <button className="cta-primary" onClick={initCal} {...calAttrs} style={{ cursor: "pointer", border: "none" }}>
+                Book a free 15-min call &rarr;
+              </button>
+            )}
 
             <div className="social-proof" style={{ marginTop: "20px" }}>
               <div className="logo-grid">
@@ -192,9 +210,15 @@ export default function App() {
                 )}
               </div>
 
-              <button className="cta-primary" {...calAttrs} style={{ marginTop: "24px", cursor: "pointer", border: "none" }}>
-                Book a free 15-min call →
-              </button>
+              {calError ? (
+                <a href={`https://cal.com/${CAL_LINK}`} target="_blank" rel="noreferrer" className="cta-primary" style={{ marginTop: "24px", cursor: "pointer", border: "none" }}>
+                  Book a free 15-min call (opens Cal.com) &rarr;
+                </a>
+              ) : (
+                <button className="cta-primary" onClick={initCal} {...calAttrs} style={{ marginTop: "24px", cursor: "pointer", border: "none" }}>
+                  Book a free 15-min call &rarr;
+                </button>
+              )}
             </section>
           </FadeIn>
 
@@ -244,13 +268,26 @@ export default function App() {
             <div className="a2-footer-col">
               <div className="a2-footer-heading">Inquiries</div>
               <span>hello@a2labs.io</span>
-              <button
-                className="cta-primary"
-                {...calAttrs}
-                style={{ marginTop: "8px", padding: "7px 12px", fontSize: "12px", display: "inline-block", textAlign: "center", width: "auto", cursor: "pointer", border: "none" }}
-              >
-                Book a call
-              </button>
+              {calError ? (
+                <a
+                  href={`https://cal.com/${CAL_LINK}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="cta-primary"
+                  style={{ marginTop: "8px", padding: "7px 12px", fontSize: "12px", display: "inline-block", textAlign: "center", width: "auto", cursor: "pointer", border: "none" }}
+                >
+                  Book a call (opens Cal.com) &rarr;
+                </a>
+              ) : (
+                <button
+                  className="cta-primary"
+                  onClick={initCal}
+                  {...calAttrs}
+                  style={{ marginTop: "8px", padding: "7px 12px", fontSize: "12px", display: "inline-block", textAlign: "center", width: "auto", cursor: "pointer", border: "none" }}
+                >
+                  Book a call
+                </button>
+              )}
             </div>
           </div>
           <div className="a2-footer-frog">
@@ -259,6 +296,7 @@ export default function App() {
         </div>
         <p className="a2-footer-copy">© 2026 Laanaya Enterprises, LLC — hosting made possible by a2labs.io</p>
       </footer>
+      </CalErrorBoundary>
     </>
   );
 }
