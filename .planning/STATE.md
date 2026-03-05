@@ -3,30 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: executing
-stopped_at: Completed 01-02-PLAN.md (Phase 1 complete)
-last_updated: "2026-03-05T18:26:06.277Z"
-last_activity: 2026-03-05 -- Completed 01-02 Font self-hosting and asset cleanup
+stopped_at: Completed 02-01-PLAN.md (Phase 2 complete)
+last_updated: "2026-03-05T20:49:42.049Z"
+last_activity: 2026-03-05 -- Completed 02-01 Semantic HTML and keyword optimization
 progress:
   total_phases: 3
-  completed_phases: 1
-  total_plans: 2
-  completed_plans: 2
----
-
----
-gsd_state_version: 1.0
-milestone: v1.0
-milestone_name: milestone
-status: executing
-stopped_at: Completed 01-02-PLAN.md
-last_updated: "2026-03-05T18:22:12.799Z"
-last_activity: 2026-03-05 -- Completed 01-02 Font self-hosting and asset cleanup
-progress:
-  total_phases: 3
-  completed_phases: 1
-  total_plans: 2
-  completed_plans: 2
-  percent: 100
+  completed_phases: 2
+  total_plans: 3
+  completed_plans: 3
 ---
 
 # Project State
@@ -36,14 +20,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-05)
 
 **Core value:** The site must load fast, rank well on search engines for iPaaS/automation niche keywords, and convert visitors into booked discovery calls.
-**Current focus:** Phase 1: SEO Foundation and Static Assets
+**Current focus:** Phase 2: Semantic HTML and Content Quality
 
 ## Current Position
 
-Phase: 1 of 3 (SEO Foundation and Static Assets) -- COMPLETE
-Plan: 2 of 2 in current phase
-Status: Phase 1 complete, ready for Phase 2 planning
-Last activity: 2026-03-05 -- Completed 01-02 Font self-hosting and asset cleanup
+Phase: 2 of 3 (Semantic HTML and Content Quality)
+Plan: 1 of 1 in current phase -- COMPLETE
+Status: Phase 2 complete, ready for Phase 3 planning
+Last activity: 2026-03-05 -- Completed 02-01 Semantic HTML and keyword optimization
 
 Progress: [██████████] 100%
 
@@ -67,6 +51,7 @@ Progress: [██████████] 100%
 *Updated after each plan completion*
 | Phase 01 P01 | 2min | 2 tasks | 5 files |
 | Phase 01 P02 | 5min | 3 tasks | 7 files |
+| Phase 02 P01 | 5min | 3 tasks | 3 files |
 
 ## Accumulated Context
 
@@ -82,6 +67,9 @@ Recent decisions affecting current work:
 - [Phase 01]: OG image generated programmatically via Node.js (no canvas dependency)
 - [Phase 01]: Banner CTA links to Cal.com booking as interim destination
 - [Phase 01]: Fontsource weight-specific imports (400/500/600) matching original Google Fonts config
+- [Phase 02]: Removed dead footer columns entirely (Resources, Company) -- all links were placeholders
+- [Phase 02]: Added "The team" h2 to maintain heading hierarchy (prevent h1-to-h3 gap)
+- [Phase 02]: 5 keyword mentions across page (workflow automation, Make.com, n8n, HubSpot automation)
 
 ### Pending Todos
 
@@ -95,6 +83,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-05T18:22:12Z
-Stopped at: Completed 01-02-PLAN.md (Phase 1 complete)
+Last session: 2026-03-05T20:49:42.033Z
+Stopped at: Completed 02-01-PLAN.md (Phase 2 complete)
 Resume file: None

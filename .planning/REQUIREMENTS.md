@@ -14,7 +14,7 @@ Requirements for this milestone. Each maps to roadmap phases.
 - [x] **SEO-03**: Site has JSON-LD structured data (Organization, ProfessionalService, FAQPage schemas)
 - [x] **SEO-04**: Site has sitemap.xml and robots.txt in public directory
 - [x] **SEO-05**: Favicon loads correctly on GitHub Pages (no 404)
-- [ ] **SEO-06**: Headings and copy include niche keywords (iPaaS automation, Make.com, workflow automation)
+- [x] **SEO-06**: Headings and copy include niche keywords (iPaaS automation, Make.com, workflow automation)
 
 ### Performance
 
@@ -27,8 +27,8 @@ Requirements for this milestone. Each maps to roadmap phases.
 
 ### HTML Quality
 
-- [ ] **HTML-01**: Semantic heading hierarchy (real h1/h2/h3, no span[role=heading] hacks)
-- [ ] **HTML-02**: Placeholder href="#" links in footer are fixed or removed
+- [x] **HTML-01**: Semantic heading hierarchy (real h1/h2/h3, no span[role=heading] hacks)
+- [x] **HTML-02**: Placeholder href="#" links in footer are fixed or removed
 - [ ] **HTML-03**: Content Security Policy added via meta tag
 - [ ] **HTML-04**: Error boundary wraps Cal.com embed to prevent white-screen crashes
 
@@ -84,15 +84,15 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SEO-03 | Phase 1 | Complete |
 | SEO-04 | Phase 1 | Complete |
 | SEO-05 | Phase 1 | Complete |
-| SEO-06 | Phase 2 | Pending |
+| SEO-06 | Phase 2 | Complete |
 | PERF-01 | Phase 1 | Complete |
 | PERF-02 | Phase 1 | Complete |
 | PERF-03 | Phase 3 | Pending |
 | PERF-04 | Phase 3 | Pending |
 | PERF-05 | Phase 3 | Pending |
 | PERF-06 | Phase 1 | Complete |
-| HTML-01 | Phase 2 | Pending |
-| HTML-02 | Phase 2 | Pending |
+| HTML-01 | Phase 2 | Complete |
+| HTML-02 | Phase 2 | Complete |
 | HTML-03 | Phase 3 | Pending |
 | HTML-04 | Phase 3 | Pending |
 | BUG-01 | Phase 1 | Complete |
