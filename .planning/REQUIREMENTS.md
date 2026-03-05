@@ -9,11 +9,11 @@ Requirements for this milestone. Each maps to roadmap phases.
 
 ### SEO
 
-- [ ] **SEO-01**: Site has complete meta tags (title, description, canonical URL) in static index.html
-- [ ] **SEO-02**: Site has Open Graph and Twitter Card tags for rich social sharing previews
-- [ ] **SEO-03**: Site has JSON-LD structured data (Organization, ProfessionalService, FAQPage schemas)
-- [ ] **SEO-04**: Site has sitemap.xml and robots.txt in public directory
-- [ ] **SEO-05**: Favicon loads correctly on GitHub Pages (no 404)
+- [x] **SEO-01**: Site has complete meta tags (title, description, canonical URL) in static index.html
+- [x] **SEO-02**: Site has Open Graph and Twitter Card tags for rich social sharing previews
+- [x] **SEO-03**: Site has JSON-LD structured data (Organization, ProfessionalService, FAQPage schemas)
+- [x] **SEO-04**: Site has sitemap.xml and robots.txt in public directory
+- [x] **SEO-05**: Favicon loads correctly on GitHub Pages (no 404)
 - [ ] **SEO-06**: Headings and copy include niche keywords (iPaaS automation, Make.com, workflow automation)
 
 ### Performance
@@ -23,7 +23,7 @@ Requirements for this milestone. Each maps to roadmap phases.
 - [ ] **PERF-03**: Images have explicit width/height attributes to prevent CLS
 - [ ] **PERF-04**: Images are optimized (compressed, appropriate format)
 - [ ] **PERF-05**: Cal.com embed loads on user interaction (CTA click), not on page mount
-- [ ] **PERF-06**: Resource hints added (preload fonts, preconnect Cal.com)
+- [x] **PERF-06**: Resource hints added (preload fonts, preconnect Cal.com)
 
 ### HTML Quality
 
@@ -79,18 +79,18 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| SEO-01 | Phase 1 | Pending |
-| SEO-02 | Phase 1 | Pending |
-| SEO-03 | Phase 1 | Pending |
-| SEO-04 | Phase 1 | Pending |
-| SEO-05 | Phase 1 | Pending |
+| SEO-01 | Phase 1 | Complete |
+| SEO-02 | Phase 1 | Complete |
+| SEO-03 | Phase 1 | Complete |
+| SEO-04 | Phase 1 | Complete |
+| SEO-05 | Phase 1 | Complete |
 | SEO-06 | Phase 2 | Pending |
 | PERF-01 | Phase 1 | Pending |
 | PERF-02 | Phase 1 | Pending |
 | PERF-03 | Phase 3 | Pending |
 | PERF-04 | Phase 3 | Pending |
 | PERF-05 | Phase 3 | Pending |
-| PERF-06 | Phase 1 | Pending |
+| PERF-06 | Phase 1 | Complete |
 | HTML-01 | Phase 2 | Pending |
 | HTML-02 | Phase 2 | Pending |
 | HTML-03 | Phase 3 | Pending |
