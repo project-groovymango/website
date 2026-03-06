@@ -1,0 +1,58 @@
+.bp-page { min-height: 100vh; background: var(--bg); color: var(--text); padding: 48px 24px; max-width: 960px; margin: 0 auto; }
+
+.bp-header { margin-bottom: 40px; }
+.bp-back { font-size: 13px; color: var(--muted); text-decoration: none; transition: color 0.15s; }
+.bp-back:hover { color: #fff; }
+.bp-title { font-size: 28px; font-weight: 600; color: #fff; letter-spacing: -0.03em; margin-top: 16px; }
+.bp-subtitle { font-size: 14px; color: var(--muted); line-height: 1.6; margin-top: 8px; }
+
+.bp-layout { display: flex; gap: 40px; }
+
+/* Sidebar */
+.bp-sidebar { width: 160px; flex-shrink: 0; display: flex; flex-direction: column; gap: 28px; }
+.bp-filter-group { display: flex; flex-direction: column; gap: 6px; }
+.bp-filter-heading { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; color: var(--cream); margin-bottom: 4px; }
+.bp-filter-btn { background: none; border: 1px solid var(--border); border-radius: 6px; padding: 6px 12px; font-size: 13px; font-family: inherit; color: var(--muted); cursor: pointer; text-align: left; transition: color 0.15s, border-color 0.15s; }
+.bp-filter-btn:hover { color: #fff; border-color: rgba(255,255,255,0.15); }
+.bp-filter-btn.active { color: #fff; border-color: rgba(255,255,255,0.25); background: rgba(255,255,255,0.04); }
+.bp-table-platform-cell { vertical-align: middle; }
+.bp-platform-stack { display: flex; flex-direction: column; gap: 6px; }
+.bp-platform-logo { display: inline-flex; align-items: center; color: #fff; opacity: 0.85; }
+.bp-platform-logo img { opacity: 0.85; }
+.bp-select { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 6px 10px; font-size: 13px; font-family: inherit; color: var(--muted); cursor: pointer; appearance: none; -webkit-appearance: none; }
+.bp-select:focus { outline: none; border-color: rgba(255,255,255,0.2); }
+
+/* Main */
+.bp-main { flex: 1; min-width: 0; }
+.bp-search { width: 100%; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 10px 14px; font-size: 14px; font-family: inherit; color: #fff; margin-bottom: 24px; transition: border-color 0.15s; }
+.bp-search::placeholder { color: var(--muted); }
+.bp-search:focus { outline: none; border-color: rgba(255,255,255,0.2); }
+
+/* Table */
+.bp-table-wrap { overflow-x: auto; }
+.bp-table { width: 100%; border-collapse: separate; border-spacing: 0; }
+.bp-table th { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); text-align: left; padding: 0 12px 12px; white-space: nowrap; border-bottom: 1px solid var(--border); }
+.bp-table td { padding: 14px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+.bp-table-row { transition: background 0.15s; }
+.bp-table-row:hover { background: rgba(255,255,255,0.02); }
+
+.bp-table-name { font-size: 14px; font-weight: 500; color: #fff; margin-bottom: 4px; }
+.bp-table-desc { font-size: 12px; color: var(--muted); line-height: 1.5; max-width: 280px; }
+.bp-table-platform { font-size: 12px; font-family: 'DM Mono', monospace; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+
+.bp-badge { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; padding: 2px 7px; border-radius: 4px; white-space: nowrap; }
+.bp-badge.free { color: var(--green); border: 1px solid rgba(52,211,153,0.3); }
+.bp-badge.premium { color: var(--gold); border: 1px solid rgba(212,193,122,0.3); }
+
+.bp-category-tag { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: #fff; border: 1px solid rgba(255,255,255,0.2); padding: 3px 8px; border-radius: 4px; white-space: nowrap; }
+.bp-tool-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+.bp-tool-tag { font-size: 11px; color: var(--muted); border: 1px solid var(--border); border-radius: 4px; padding: 2px 7px; white-space: nowrap; }
+
+.bp-empty { font-size: 14px; color: var(--muted); text-align: center; padding: 40px 0; }
+
+@media (max-width: 640px) {
+  .bp-layout { flex-direction: column; gap: 24px; }
+  .bp-sidebar { width: 100%; flex-direction: row; flex-wrap: wrap; gap: 16px; }
+  .bp-filter-group { flex: 1; min-width: 140px; }
+  .bp-table th:nth-child(4), .bp-table td:nth-child(4) { display: none; }
+}

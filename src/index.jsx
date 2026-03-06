@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./styles/global.css";
 
 import FadeIn from "./components/FadeIn";
@@ -10,7 +11,7 @@ import CalErrorBoundary from "./components/CalErrorBoundary";
 import { LOGOS, FAQ_ITEMS, CASE_STUDIES, CAL_LINK } from "./data/content";
 import frogWebp from "./assets/frog.webp";
 import { MakeLogo } from "./components/iPaaSLogos";
-import n8nLogo from "./assets/n8n-logo.svg";
+import n8nLogo from "./assets/N8n-logo-new.svg";
 import aminPhoto from "./assets/amin.webp";
 
 const calAttrs = {
@@ -301,7 +302,7 @@ export default function App() {
             </div>
             <div className="a2-footer-col">
               <div className="a2-footer-heading">Company</div>
-              <a href="#" style={{ display: "inline-flex", alignItems: "baseline", gap: "5px" }}>Blueprints <span style={{ fontSize: "9px", background: "var(--gold)", color: "#000", padding: "0 4px", borderRadius: "3px", fontWeight: 600 }}>new</span></a>
+              <Link to="/blueprints" style={{ display: "inline-flex", alignItems: "baseline", gap: "5px" }}>Blueprints <span style={{ fontSize: "9px", background: "var(--gold)", color: "#000", padding: "0 4px", borderRadius: "3px", fontWeight: 600 }}>new</span></Link>
               <a href="#">About</a>
               <a href="#">Careers</a>
             </div>

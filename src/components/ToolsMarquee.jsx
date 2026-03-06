@@ -7,7 +7,7 @@ import notion from "../assets/notion-logo.svg";
 import chargebee from "../assets/chargebee-logo.svg";
 import elevenlabs from "../assets/elevenlabs-logo.svg";
 import partnerstack from "../assets/partnerstack-logo.svg";
-import n8n from "../assets/n8n-logo.svg";
+import n8n from "../assets/N8n-logo-new.svg";
 import { MakeLogo } from "./iPaaSLogos";
 
 const LOGOS = [
