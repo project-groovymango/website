@@ -1,5 +1,5 @@
 import { ErrorBoundary } from "react-error-boundary";
-import { CAL_LINK } from "../data/content";
+import { CAL_LINK } from "../data/home";
 
 function CalFallback() {
   return (

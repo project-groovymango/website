@@ -3,11 +3,11 @@ import ReactMarkdown from "react-markdown";
 import "../styles/global.css";
 import "../styles/blueprint-detail.css";
 import { BLUEPRINTS } from "../data/blueprints";
-import { CAL_LINK } from "../data/content";
+import { CAL_LINK } from "../data/home";
 import n8nLogo from "../assets/N8n-logo-new.svg";
 import { MakeLogo } from "../components/iPaaSLogos";
 
-const markdownFiles = import.meta.glob("../data/blueprints/*.md", { as: "raw", eager: true });
+const markdownFiles = import.meta.glob("../data/blueprints/templates/*.md", { as: "raw", eager: true });
 
 export default function BlueprintDetail() {
   const { slug } = useParams();

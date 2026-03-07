@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import "../styles/global.css";
 import "../styles/blueprints.css";
 import { BLUEPRINTS, PLATFORMS, TIERS, CATEGORIES, ALL_TOOLS } from "../data/blueprints";
@@ -8,6 +8,8 @@ import n8nLogo from "../assets/N8n-logo-new.svg";
 import { MakeLogo } from "../components/iPaaSLogos";
 
 export default function Blueprints() {
+  const location = useLocation();
+  const backTo = location.state?.from === "how-it-works" ? "/#how-it-works" : "/";
   const [search, setSearch] = useState("");
   const [platform, setPlatform] = useState(null);
   const [tier, setTier] = useState(null);
@@ -34,7 +36,7 @@ export default function Blueprints() {
   return (
     <div className="bp-page">
       <div className="bp-header">
-        <Link to="/" className="bp-back">&larr; a2labs</Link>
+        <Link to={backTo} className="bp-back">&larr; a2labs</Link>
         <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
           <img src={frogWebp} alt="a2labs" width={313} height={350} style={{ width: "36px", height: "auto" }} />
           <h1 className="bp-title">Blueprints</h1>

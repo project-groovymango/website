@@ -1,11 +1,7 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
-export default function Faq({ q, a, children, forceOpen }) {
+export default function Faq({ q, a, children }) {
   const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    if (forceOpen && !open) setOpen(true);
-  }, [forceOpen]);
 
   return (
     <div className="faq-item" onClick={() => setOpen(o => !o)}>

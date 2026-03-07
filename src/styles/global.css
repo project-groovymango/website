@@ -49,8 +49,12 @@ h3.step-title, .step-title { font-size: 14px; font-weight: 600; color: var(--cre
 .toggle-wrap { display: flex; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 3px; margin-bottom: 20px; }
 .toggle-btn { flex: 1; padding: 9px 12px; font-size: 13px; font-weight: 500; font-family: inherit; color: var(--muted); background: none; border: none; border-radius: 6px; cursor: pointer; transition: color 0.15s, background 0.15s; }
 .toggle-btn.active { background: rgba(255,255,255,0.06); color: #fff; }
+.toggle-btn.gold { color: var(--gold); }
+.toggle-btn.gold.active { color: var(--gold); }
 .toggle-btn:hover:not(.active) { color: var(--text); }
-.toggle-content { }
+.toggle-content { display: grid; }
+.toggle-content > * { grid-area: 1 / 1; visibility: hidden; }
+.toggle-content > .active { visibility: visible; }
 .toggle-pricing { font-size: 11px; font-family: 'DM Mono', monospace; color: var(--gold); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; }
 
 .faq { display: flex; flex-direction: column; gap: 4px; }

@@ -1,0 +1,15 @@
+.sc-page { min-height: 100vh; background: var(--bg); color: var(--text); padding: 48px 24px; max-width: 600px; margin: 0 auto; }
+
+.sc-back { font-size: 13px; color: var(--muted); text-decoration: none; transition: color 0.15s; }
+.sc-back:hover { color: #fff; }
+
+.sc-title { font-size: 28px; font-weight: 600; color: #fff; letter-spacing: -0.03em; margin-top: 24px; }
+.sc-subtitle { font-size: 14px; color: var(--muted); line-height: 1.6; margin-top: 8px; margin-bottom: 32px; }
+
+.sc-heading { font-size: 16px; font-weight: 600; color: #fff; margin: 32px 0 12px; }
+.sc-contact-desc { font-size: 13px; color: #fff; line-height: 1.6; margin: 0 0 8px; }
+
+.sc-note { margin-top: 40px; padding: 16px; border: 1px solid var(--border); border-radius: 8px; }
+.sc-note p { font-size: 13px; color: var(--muted); margin: 0; line-height: 1.6; }
+.sc-note a { color: #fff; text-decoration: underline; text-underline-offset: 2px; }
+.sc-note a:hover { color: var(--gold); }

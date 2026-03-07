@@ -1,11 +1,11 @@
-import hubspot from "../assets/hubspot-logo.svg";
-import intercom from "../assets/intercom-logo.svg";
-import stripe from "../assets/stripe-logo.svg";
-import google from "../assets/google-logo.svg";
-import openai from "../assets/openai-logo.svg";
-import notion from "../assets/notion-logo.svg";
-import chargebee from "../assets/chargebee-logo.svg";
-import elevenlabs from "../assets/elevenlabs-logo.svg";
+import hubspot from "../../assets/hubspot-logo.svg";
+import intercom from "../../assets/intercom-logo.svg";
+import stripe from "../../assets/stripe-logo.svg";
+import google from "../../assets/google-logo.svg";
+import openai from "../../assets/openai-logo.svg";
+import notion from "../../assets/notion-logo.svg";
+import chargebee from "../../assets/chargebee-logo.svg";
+import elevenlabs from "../../assets/elevenlabs-logo.svg";
 
 export const CAL_LINK = "amin-laanaya-b5k6ne/30min";
 

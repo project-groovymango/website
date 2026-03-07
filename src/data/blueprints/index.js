@@ -52,6 +52,17 @@ export const BLUEPRINTS = [
     tools: ["Slack", "GetAccept"],
     file: null,
   },
+  {
+    slug: "linkedin-auto-poster",
+    title: "Automatic LinkedIn poster (the one I use for all of my posts)",
+    desc: "Just sit for an hour every now and then and write posts and save time",
+    platform: ["n8n", "make"],
+    tier: "free",
+    price: 129,
+    category: "Quality of life",
+    tools: ["LinkedIn"],
+    file: null,
+  },
 ];
 
 export const PLATFORMS = ["n8n", "make"];

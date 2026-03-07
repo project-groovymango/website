@@ -6,9 +6,10 @@ import "@fontsource/dm-mono/500.css";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import App from "./index";
+import App from "./pages/Home";
 import Blueprints from "./pages/Blueprints";
 import BlueprintDetail from "./pages/BlueprintDetail";
+import SlackConnect from "./pages/SlackConnect";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -17,6 +18,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/" element={<App />} />
         <Route path="/blueprints" element={<Blueprints />} />
         <Route path="/blueprints/:slug" element={<BlueprintDetail />} />
+        <Route path="/slack" element={<SlackConnect />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
