@@ -23,7 +23,7 @@ const calAttrs = {
 
 export default function App() {
   const location = useLocation();
-  const [workOpen, setWorkOpen] = useState(false);
+
   const [tooltip, setTooltip] = useState(null);
   const [track, setTrack] = useState("audit");
   const calInitRef = useRef(false);
@@ -54,8 +54,7 @@ export default function App() {
   }
 
 
-  const visibleCases = CASE_STUDIES.filter(c => c.visible);
-  const hiddenCases = CASE_STUDIES.filter(c => !c.visible);
+  const allCases = CASE_STUDIES;
 
   return (
     <>
@@ -117,20 +116,10 @@ export default function App() {
               <h2 className="section-label">Previous projects</h2>
               <p className="work-intro">Whilst our dear mothers still think we fix computers, this is what we actually do — if it has an API, we can help you automate or rethink the process.</p>
 
-              <div className="case-list">
-                {visibleCases.map(({ title, logo, logoAlt, logoWidth, desc }) => (
-                  <div className="case-row" key={title}>
-                    <div className="case-left">
-                      <h3 className="case-title">{title}</h3>
-                      <div className="case-logo"><img src={logo} alt={logoAlt} width={logoWidth} height={14} /></div>
-                    </div>
-                    <p className="case-desc">{desc}</p>
-                  </div>
-                ))}
-
-                <div className={`case-more${workOpen ? " open" : ""}`}>
-                  {hiddenCases.map(({ title, logo, logoAlt, logoWidth, desc }) => (
-                    <div className="case-row" key={title}>
+              <div className="case-ticker-wrap">
+                <div className="case-ticker">
+                  {[...allCases, ...allCases].map(({ title, logo, logoAlt, logoWidth, desc }, i) => (
+                    <div className="case-row" key={`${title}-${i}`}>
                       <div className="case-left">
                         <h3 className="case-title">{title}</h3>
                         <div className="case-logo"><img src={logo} alt={logoAlt} width={logoWidth} height={14} /></div>
@@ -140,13 +129,6 @@ export default function App() {
                   ))}
                 </div>
               </div>
-
-              <button className="show-more-btn" onClick={() => setWorkOpen(prev => !prev)}>
-                {workOpen ? "Show less ↑" : "Show more work ↓"}
-              </button>
-              {workOpen && (
-                <p className="show-more-note">That's it, what did you expect? We just started.</p>
-              )}
             </section>
           </FadeIn>
 
@@ -154,7 +136,7 @@ export default function App() {
             <section id="how-it-works">
               <h2 className="section-label">How it works</h2>
 
-              <p className="toggle-intro">Two ways to work with us — depending on whether you already know what needs automating or need us to figure that out first.</p>
+              <p className="toggle-intro">Three ways to work with us. We provide a full service audit of your go-to-market stack and see what can run more efficient or we execute upon a predefined scope. Alternatively use our blueprints like other companies.</p>
 
               <div className="toggle-wrap">
                 <button className={`toggle-btn${track === "audit" ? " active" : ""}`} onClick={() => setTrack("audit")}>Process audit</button>
@@ -189,22 +171,22 @@ export default function App() {
                     <div className="step">
                       <span className="step-num">1</span>
                       <div>
-                        <h3 className="step-title">We audit your process</h3>
-                        <div className="step-desc">We map out your entire workflow end-to-end, identify bottlenecks, and figure out what's worth automating.</div>
+                        <h3 className="step-title">Audit of your lead to customer journey</h3>
+                        <div className="step-desc">We map out the entire journey and figure out where time is most wasted in the process. Together we will discuss our findings and suggestions.</div>
                       </div>
                     </div>
                     <div className="step">
                       <span className="step-num">2</span>
                       <div>
                         <h3 className="step-title">Prioritize by impact</h3>
-                        <div className="step-desc">Not everything needs automating. We rank opportunities by time saved and complexity, then tackle the highest-impact ones first.</div>
+                        <div className="step-desc">Not everything needs to be fixed. After the bottlenecks have been presented, we priortise them in partnership and talk about the approach.</div>
                       </div>
                     </div>
                     <div className="step">
                       <span className="step-num">3</span>
                       <div>
-                        <h3 className="step-title">Build and hand over</h3>
-                        <div className="step-desc">We build the automations, connect your tools, document everything, and hand it over. You own it.</div>
+                        <h3 className="step-title">Building it out and handing over</h3>
+                        <div className="step-desc">Once aligned on priorities... we build, test, iterate, monitor, document and train relevant stakeholders. Our priority is adoption of the deliverable.</div>
                       </div>
                     </div>
                   </div>
@@ -215,21 +197,22 @@ export default function App() {
                       <span className="step-num">1</span>
                       <div>
                         <h3 className="step-title">Tell us the problem</h3>
-                        <div className="step-desc">You come to us with a specific task or bottleneck. We get on a call and understand exactly what needs solving.</div>
+                        <div className="step-desc">You come to us with a specific task or problem.</div>
                       </div>
                     </div>
                     <div className="step">
                       <span className="step-num">2</span>
                       <div>
-                        <h3 className="step-title">We scope and quote</h3>
-                        <div className="step-desc">Fixed price, no surprises. We define the deliverable, timeline, and what "done" looks like before we start.</div>
+                        <h3 className="step-title">Scoping 'n quoting</h3>
+                        <div className="step-desc">We break down what has to be done to solve the bottleneck, define what success looks like, and give you a clear timeline and fixed quote.</div>
                       </div>
                     </div>
                     <div className="step">
                       <span className="step-num">3</span>
                       <div>
                         <h3 className="step-title">Build and hand over</h3>
-                        <div className="step-desc">We build it, test it, connect your tools, and deliver a working automation — documented and maintainable.</div>
+                        <div className="step-desc">Once we get the green light... we build, test, iterate, monitor, document, train relevant stakeholders and handover the automation blueprint.
+                        </div>
                       </div>
                     </div>
                   </div>

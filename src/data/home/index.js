@@ -6,6 +6,8 @@ import openai from "../../assets/openai-logo.svg";
 import notion from "../../assets/notion-logo.svg";
 import chargebee from "../../assets/chargebee-logo.svg";
 import elevenlabs from "../../assets/elevenlabs-logo.svg";
+import tellent from "../../assets/tellent-logo.svg";
+import allbound from "../../assets/allbound.svg";
 
 export const CAL_LINK = "amin-laanaya-b5k6ne/30min";
 
@@ -33,9 +35,9 @@ export const LOGOS = [
 ];
 
 export const CASE_STUDIES = [
-  { title: "Round Robin", logo: stripe, logoAlt: "Stripe", logoWidth: 34, desc: "Implemented region-based lead routing connected to their calendar. Saved ops 6 hours/week and eliminated manual handoff errors entirely.", visible: true },
-  { title: "Quote-to-Cash", logo: hubspot, logoAlt: "HubSpot", logoWidth: 49, desc: "Connected CRM, invoicing, and approval flows into a single automated pipeline. Reduced average deal-close time from 11 days to 3.", visible: true },
-  { title: "Platform Move", logo: notion, logoAlt: "Notion", logoWidth: 39, desc: "Migrated 4 years of project history, client records, and billing data to a new platform over a single weekend. Zero data loss, zero downtime.", visible: true },
+  { title: "Lead assignment", logo: tellent, logoAlt: "Tellent", logoWidth: 64, desc: "Round-robin style lead assignment based on size and region with a controlpanel, allowing SalesOps to handover adjustment to the sales managers.", visible: true },
+  { title: "System migration", logo: tellent, logoAlt: "Tellent", logoWidth: 64, desc: "Merged three Hubspot systems into one after a merger and acquisition. The key was aligning the sales process before moving things over.", visible: true },
+  { title: "Platform Move", logo: allbound, logoAlt: "Allbound", logoWidth: 85, desc: "Migrated 4 years of project history, client records, and billing data to a new platform over a single weekend. Zero data loss, zero downtime.", visible: true },
   { title: "Support Agent", logo: intercom, logoAlt: "Intercom", logoWidth: 59, desc: "Built a custom AI agent that handles first-line support, books demos, and logs everything back into HubSpot. Deflected 60% of inbound tickets in the first month.", visible: false },
 ];
 
