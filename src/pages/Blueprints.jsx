@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../styles/global.css";
 import "../styles/blueprints.css";
 import { BLUEPRINTS, PLATFORMS, TIERS, CATEGORIES, ALL_TOOLS } from "../data/blueprints";
@@ -13,6 +13,7 @@ export default function Blueprints() {
   const [tier, setTier] = useState(null);
   const [category, setCategory] = useState(null);
   const [tool, setTool] = useState(null);
+  const navigate = useNavigate();
 
   const filtered = useMemo(() => {
     return BLUEPRINTS.filter(b => {
@@ -101,7 +102,7 @@ export default function Blueprints() {
               </thead>
               <tbody>
                 {filtered.map((b, i) => (
-                  <tr key={i} className="bp-table-row">
+                  <tr key={i} className="bp-table-row" onClick={() => navigate(`/blueprints/${b.slug}`)} style={{ cursor: "pointer" }}>
                     <td>
                       <div className="bp-table-name">{b.title}</div>
                       <div className="bp-table-desc">{b.desc}</div>

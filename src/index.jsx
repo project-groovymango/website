@@ -118,14 +118,8 @@ export default function App() {
 
             <div className="social-proof" style={{ marginTop: "20px" }}>
               <div className="logo-grid">
-                {LOGOS.map(({ src, alt, dot, delay, cs, width }, i) => (
-                  <div
-                    className={`brand-logo${dot ? " has-dot" : ""}`}
-                    key={i}
-                    onMouseEnter={() => dot && setTooltip(cs)}
-                    onMouseLeave={() => setTooltip(null)}
-                  >
-                    {dot && <span className={`pulse-dot${delay ? " delay" : ""}`} />}
+                {LOGOS.map(({ src, alt, width }, i) => (
+                  <div className="brand-logo" key={i}>
                     <img src={src} alt={alt} width={width} height={24} />
                   </div>
                 ))}
@@ -180,10 +174,37 @@ export default function App() {
               <div className="toggle-wrap">
                 <button className={`toggle-btn${track === "audit" ? " active" : ""}`} onClick={() => setTrack("audit")}>Process audit</button>
                 <button className={`toggle-btn${track === "problem" ? " active" : ""}`} onClick={() => setTrack("problem")}>Specific problem</button>
+                <button className={`toggle-btn${track === "blueprints" ? " active" : ""}`} onClick={() => setTrack("blueprints")}>
+                  Blueprints
+                </button>
               </div>
 
               <div className="toggle-content">
-{track === "audit" ? (
+{track === "blueprints" ? (
+                  <div className="steps">
+                    <div className="step">
+                      <span className="step-num">1</span>
+                      <div>
+                        <h3 className="step-title">Browse our blueprints</h3>
+                        <div className="step-desc">Pick from a growing library of ready-made automations for Make and n8n — free or premium.</div>
+                      </div>
+                    </div>
+                    <div className="step">
+                      <span className="step-num">2</span>
+                      <div>
+                        <h3 className="step-title">Download or buy</h3>
+                        <div className="step-desc">Free blueprints you download instantly. Premium ones come with a one-time payment — no subscriptions.</div>
+                      </div>
+                    </div>
+                    <div className="step">
+                      <span className="step-num">3</span>
+                      <div>
+                        <h3 className="step-title">Import and go</h3>
+                        <div className="step-desc">Import the blueprint into your platform, connect your accounts, and you're live. Or let us set it up for you.</div>
+                      </div>
+                    </div>
+                  </div>
+                ) : track === "audit" ? (
                   <div className="steps">
                     <div className="step">
                       <span className="step-num">1</span>
@@ -234,7 +255,11 @@ export default function App() {
                 )}
               </div>
 
-              {calError ? (
+              {track === "blueprints" ? (
+                <Link to="/blueprints" className="cta-primary" style={{ marginTop: "24px", cursor: "pointer", border: "none", background: "var(--gold)", color: "#000", display: "block", textAlign: "center", textDecoration: "none", padding: "13px", boxSizing: "border-box", lineHeight: "normal", fontSize: "14px" }}>
+                  Browse our blueprints &rarr;
+                </Link>
+              ) : calError ? (
                 <a href={`https://cal.com/${CAL_LINK}`} target="_blank" rel="noreferrer" className="cta-primary" style={{ marginTop: "24px", cursor: "pointer", border: "none" }}>
                   Book a free 15-min call (opens Cal.com) &rarr;
                 </a>

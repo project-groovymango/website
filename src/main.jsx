@@ -8,6 +8,7 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./index";
 import Blueprints from "./pages/Blueprints";
+import BlueprintDetail from "./pages/BlueprintDetail";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -15,6 +16,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/blueprints" element={<Blueprints />} />
+        <Route path="/blueprints/:slug" element={<BlueprintDetail />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
