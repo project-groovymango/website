@@ -4,8 +4,6 @@ import "../styles/global.css";
 
 import FadeIn from "../components/FadeIn";
 import Faq from "../components/Faq";
-import StepTitle from "../components/StepTitle";
-import Tooltip from "../components/Tooltip";
 import ToolsMarquee from "../components/ToolsMarquee";
 import CalErrorBoundary from "../components/CalErrorBoundary";
 import { LOGOS, FAQ_ITEMS, CASE_STUDIES, CAL_LINK } from "../data/home";
@@ -24,7 +22,6 @@ const calAttrs = {
 export default function App() {
   const location = useLocation();
 
-  const [tooltip, setTooltip] = useState(null);
   const [track, setTrack] = useState("audit");
   const calInitRef = useRef(false);
 
@@ -34,37 +31,47 @@ export default function App() {
       if (el) el.scrollIntoView({ behavior: "smooth" });
     }
   }, [location]);
-  const [calLoading, setCalLoading] = useState(false);
+
+  const [navVisible, setNavVisible] = useState(false);
+  useEffect(() => {
+    const onScroll = () => setNavVisible(window.scrollY > 100);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   const [calError, setCalError] = useState(false);
 
-  async function initCal() {
+  useEffect(() => {
     if (calInitRef.current) return;
-    setCalLoading(true);
-    try {
-      const { getCalApi } = await import("@calcom/embed-react");
-      const cal = await getCalApi({ namespace: "30min" });
-      cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
-      calInitRef.current = true;
-    } catch (err) {
-      console.error("Cal.com embed failed to load:", err);
-      setCalError(true);
-    } finally {
-      setCalLoading(false);
-    }
-  }
+    const timer = setTimeout(async () => {
+      try {
+        const { getCalApi } = await import("@calcom/embed-react");
+        const cal = await getCalApi({ namespace: "30min" });
+        cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
+        calInitRef.current = true;
+      } catch (err) {
+        console.error("Cal.com embed failed to load:", err);
+        setCalError(true);
+      }
+    }, 3000);
+    return () => clearTimeout(timer);
+  }, []);
 
 
   const allCases = CASE_STUDIES;
 
   return (
     <>
-      <Tooltip tooltip={tooltip} />
-
       <CalErrorBoundary>
-      <div className="banner">
-        Book a free automation consultation —{" "}
-        <a href={`https://cal.com/${CAL_LINK}`} target="_blank" rel="noreferrer">schedule a call →</a>
-      </div>
+      <nav className={`navbar${navVisible ? " navbar-visible" : ""}`}>
+        <div className="navbar-inner">
+          <Link to="/" className="navbar-brand"><img src={frogWebp} alt="" width={96} height={107} />a2labs</Link>
+          <div className="navbar-links">
+            <Link to="/blueprints" className="navbar-link">Blueprints</Link>
+            <a href={`https://cal.com/${CAL_LINK}`} target="_blank" rel="noreferrer" className="navbar-cta" {...calAttrs} onClick={e => e.preventDefault()}>Book a call</a>
+          </div>
+        </div>
+      </nav>
 
       <div className="container">
         <main>
@@ -74,7 +81,7 @@ export default function App() {
               <div className="logo-row" style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
                 <div style={{ display: "flex", alignItems: "flex-start", gap: "14px" }}>
                   <div className="logo">
-                    <img src={frogWebp} alt="a2labs logo" width={313} height={350} style={{ width: "48px", height: "auto", position: "relative", top: "-6px" }} />
+                    <img src={frogWebp} alt="a2labs logo" width={96} height={107} style={{ width: "48px", height: "auto", position: "relative", top: "-6px" }} />
                   </div>
                   <h1>a2labs</h1>
                 </div>
@@ -95,7 +102,7 @@ export default function App() {
                 Book a free 15-min call (opens Cal.com) &rarr;
               </a>
             ) : (
-              <button className="cta-primary" onClick={initCal} {...calAttrs} style={{ cursor: "pointer", border: "none" }}>
+              <button className="cta-primary" {...calAttrs} style={{ cursor: "pointer", border: "none" }}>
                 Book a free 15-min call &rarr;
               </button>
             )}
@@ -104,7 +111,7 @@ export default function App() {
               <div className="logo-grid">
                 {LOGOS.map(({ src, alt, width }, i) => (
                   <div className="brand-logo" key={i}>
-                    <img src={src} alt={alt} width={width} height={24} />
+                    <img src={src} alt={alt} width={width} height={24} loading="lazy" decoding="async" />
                   </div>
                 ))}
               </div>
@@ -113,7 +120,7 @@ export default function App() {
 
           <FadeIn>
             <section id="projects">
-              <h2 className="section-label">Previous projects</h2>
+              <h2 className="section-label">What we do</h2>
               <p className="work-intro">Whilst our dear mothers still think we fix computers, this is what we actually do — if it has an API, we can help you automate or rethink the process.</p>
 
               <div className="case-ticker-wrap">
@@ -122,7 +129,7 @@ export default function App() {
                     <div className="case-row" key={`${title}-${i}`}>
                       <div className="case-left">
                         <h3 className="case-title">{title}</h3>
-                        <div className="case-logo"><img src={logo} alt={logoAlt} width={logoWidth} height={14} /></div>
+                        <div className="case-logo"><img src={logo} alt={logoAlt} width={logoWidth} height={14} loading="lazy" decoding="async" /></div>
                       </div>
                       <p className="case-desc">{desc}</p>
                     </div>
@@ -134,7 +141,7 @@ export default function App() {
 
           <FadeIn>
             <section id="how-it-works">
-              <h2 className="section-label">How it works</h2>
+              <h2 className="section-label">How we do things</h2>
 
               <p className="toggle-intro">Three ways to work with us. We provide a full service audit of your go-to-market stack and see what can run more efficient or we execute upon a predefined scope. Alternatively use our blueprints like other companies.</p>
 
@@ -228,7 +235,7 @@ export default function App() {
                   Book a free 15-min call (opens Cal.com) &rarr;
                 </a>
               ) : (
-                <button className="cta-primary" onClick={initCal} {...calAttrs} style={{ marginTop: "24px", cursor: "pointer", border: "none" }}>
+                <button className="cta-primary" {...calAttrs} style={{ marginTop: "24px", cursor: "pointer", border: "none" }}>
                   Book a free 15-min call &rarr;
                 </button>
               )}
@@ -237,11 +244,11 @@ export default function App() {
 
           <FadeIn>
             <section id="team">
-              <h2 className="section-label">The "team"</h2>
+              <h2 className="section-label">The team</h2>
               <div className="team-list">
                 <div className="team-card" style={{ position: "relative" }}>
                   <div className="team-img-wrap">
-                    <img className="team-img" src={aminPhoto} alt="Amin Laanaya" width={256} height={256} loading="lazy" />
+                    <img className="team-img" src={aminPhoto} alt="Amin Laanaya" width={150} height={150} loading="lazy" />
                   </div>
                   <div className="team-info">
                     <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start" }}>
@@ -259,7 +266,7 @@ export default function App() {
                 </div>
                 <div className="team-card">
                   <div className="team-img-wrap">
-                    <img className="team-img" src={angelaPhoto} alt="Angela" width={256} height={256} loading="lazy" />
+                    <img className="team-img" src={angelaPhoto} alt="Angela" width={150} height={150} loading="lazy" />
                   </div>
                   <div className="team-info">
                     <h3 className="team-name">Angela den Hollander</h3>
@@ -328,8 +335,7 @@ export default function App() {
               ) : (
                 <button
                   className="cta-primary"
-                  onClick={initCal}
-                  {...calAttrs}
+                                   {...calAttrs}
                   style={{ marginTop: "8px", padding: "7px 12px", fontSize: "12px", display: "inline-block", textAlign: "center", width: "auto", cursor: "pointer", border: "none" }}
                 >
                   Book a call
@@ -338,7 +344,7 @@ export default function App() {
             </div>
           </div>
           <div className="a2-footer-frog">
-            <img src={frogWebp} alt="a2labs logo" width={313} height={350} style={{ width: "96px", height: "auto" }} />
+            <img src={frogWebp} alt="a2labs logo" width={96} height={107} style={{ width: "96px", height: "auto" }} />
           </div>
         </div>
         <p className="a2-footer-copy">© 2026 Laanaya Enterprises, LLC — hosting made possible by a2labs.io</p>

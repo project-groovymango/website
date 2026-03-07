@@ -12,33 +12,21 @@ import allbound from "../../assets/allbound.svg";
 export const CAL_LINK = "amin-laanaya-b5k6ne/30min";
 
 export const LOGOS = [
-  {
-    src: hubspot, alt: "HubSpot", width: 84, dot: true, delay: false,
-    cs: {
-      body: "Built a region-based lead routing system connected to their Stripe billing and calendar. Eliminated manual handoffs entirely and saved the ops team 6 hours every week.",
-      person: { name: "Sarah Chen", role: "Head of Operations", emoji: "\u{1F469}", photo: null }
-    }
-  },
-  { src: intercom, alt: "Intercom", width: 101, dot: false },
-  { src: stripe, alt: "Stripe", width: 58, dot: false },
-  { src: google, alt: "Google", width: 74, dot: false },
-  { src: openai, alt: "OpenAI", width: 86, dot: false },
-  {
-    src: notion, alt: "Notion", width: 67, dot: true, delay: true,
-    cs: {
-      body: "Connected Salesforce CRM, invoicing, and approval flows into a single automated pipeline. Reduced average deal-close time from 11 days down to 3.",
-      person: { name: "Marcus Webb", role: "VP of Sales", emoji: "\u{1F468}", photo: null }
-    }
-  },
-  { src: chargebee, alt: "Chargebee", width: 77, dot: false },
-  { src: elevenlabs, alt: "ElevenLabs", width: 90, dot: false },
+  { src: hubspot, alt: "HubSpot", width: 84 },
+  { src: intercom, alt: "Intercom", width: 101 },
+  { src: stripe, alt: "Stripe", width: 58 },
+  { src: google, alt: "Google", width: 74 },
+  { src: openai, alt: "OpenAI", width: 86 },
+  { src: notion, alt: "Notion", width: 67 },
+  { src: chargebee, alt: "Chargebee", width: 77 },
+  { src: elevenlabs, alt: "ElevenLabs", width: 90 },
 ];
 
 export const CASE_STUDIES = [
-  { title: "Lead assignment", logo: tellent, logoAlt: "Tellent", logoWidth: 64, desc: "Round-robin style lead assignment based on size and region with a controlpanel, allowing SalesOps to handover adjustment to the sales managers.", visible: true },
-  { title: "System migration", logo: tellent, logoAlt: "Tellent", logoWidth: 64, desc: "Merged three Hubspot systems into one after a merger and acquisition. The key was aligning the sales process before moving things over.", visible: true },
-  { title: "Platform Move", logo: allbound, logoAlt: "Allbound", logoWidth: 85, desc: "Migrated 4 years of project history, client records, and billing data to a new platform over a single weekend. Zero data loss, zero downtime.", visible: true },
-  { title: "Support Agent", logo: intercom, logoAlt: "Intercom", logoWidth: 59, desc: "Built a custom AI agent that handles first-line support, books demos, and logs everything back into HubSpot. Deflected 60% of inbound tickets in the first month.", visible: false },
+  { title: "Lead assignment", logo: tellent, logoAlt: "Tellent", logoWidth: 64, desc: "Round-robin style lead assignment based on size and region with a controlpanel, allowing SalesOps to handover adjustment to the sales managers." },
+  { title: "System migration", logo: tellent, logoAlt: "Tellent", logoWidth: 64, desc: "Merged three Hubspot systems into one after a merger and acquisition. The key was aligning the sales process before moving things over." },
+  { title: "Platform Move", logo: allbound, logoAlt: "Allbound", logoWidth: 85, desc: "Migrated 4 years of project history, client records, and billing data to a new platform over a single weekend. Zero data loss, zero downtime." },
+  { title: "Support Agent", logo: intercom, logoAlt: "Intercom", logoWidth: 59, desc: "Built a custom AI agent that handles first-line support, books demos, and logs everything back into HubSpot. Deflected 60% of inbound tickets in the first month." },
 ];
 
 export const FAQ_ITEMS = [
