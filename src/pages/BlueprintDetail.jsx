@@ -26,65 +26,77 @@ export default function BlueprintDetail() {
   const markdown = mdKey ? markdownFiles[mdKey] : "No content yet.";
 
   return (
-    <div className="bpd-page">
-      <Link to="/blueprints" className="bpd-back">&larr; Back to blueprints</Link>
+    <>
+      <div className="bpd-page">
+        <Link to="/blueprints" className="bpd-back">&larr; Back to blueprints</Link>
 
-      <div className="bpd-layout">
-        <main className="bpd-content">
-          <h1 className="bpd-title">{blueprint.title}</h1>
-          <div className="bpd-markdown">
-            <ReactMarkdown>{markdown}</ReactMarkdown>
-          </div>
-        </main>
-
-        <aside className="bpd-sidebar">
-          <div className="bpd-card">
-            <div className="bpd-card-tier">
-              <span className={`bp-badge ${blueprint.tier}`}>{blueprint.tier}</span>
+        <div className="bpd-layout">
+          <main className="bpd-content">
+            <h1 className="bpd-title">{blueprint.title}</h1>
+            <div className="bpd-markdown">
+              <ReactMarkdown>{markdown}</ReactMarkdown>
             </div>
+          </main>
 
-            <div className="bpd-card-section">
-              <div className="bpd-card-label">Platform</div>
-              <div className="bpd-card-platforms">
-                {blueprint.platform.includes("make") && <span className="bp-platform-logo"><MakeLogo height={14} /></span>}
-                {blueprint.platform.includes("n8n") && <img src={n8nLogo} alt="n8n" height={16} className="bp-platform-logo" />}
+          <aside className="bpd-sidebar">
+            <div className="bpd-sidebar-line" />
+            <div className="bpd-sidebar-content">
+              <div className="bpd-sidebar-section">
+                <div className="bpd-sidebar-label">Tier</div>
+                <span className={`bp-badge ${blueprint.tier}`}>{blueprint.tier}</span>
               </div>
-            </div>
 
-            <div className="bpd-card-section">
-              <div className="bpd-card-label">Category</div>
-              <span className="bp-category-tag">{blueprint.category}</span>
-            </div>
-
-            <div className="bpd-card-section">
-              <div className="bpd-card-label">Tools</div>
-              <div className="bp-tool-tags">
-                {blueprint.tools.map(t => <span key={t} className="bp-tool-tag">{t}</span>)}
+              <div className="bpd-sidebar-section">
+                <div className="bpd-sidebar-label">Platform</div>
+                <div className="bpd-sidebar-platforms">
+                  {blueprint.platform.includes("make") && <span className="bp-platform-logo"><MakeLogo height={14} /></span>}
+                  {blueprint.platform.includes("n8n") && <img src={n8nLogo} alt="n8n" height={16} className="bp-platform-logo" />}
+                </div>
               </div>
-            </div>
 
-            <div className="bpd-card-actions">
-              {blueprint.tier === "free" ? (
-                <a href={blueprint.file || "#"} className="bpd-btn bpd-btn-primary" download>
-                  Download blueprint
-                </a>
-              ) : (
-                <a href="https://buy.stripe.com/test_8x2cN7csggyj5qmf8new800" target="_blank" rel="noreferrer" className="bpd-btn bpd-btn-primary">
-                  Buy blueprint for {blueprint.price} EUR
-                </a>
+              <div className="bpd-sidebar-section">
+                <div className="bpd-sidebar-label">Category</div>
+                <span className="bpd-sidebar-value">{blueprint.category}</span>
+              </div>
+
+              <div className="bpd-sidebar-section">
+                <div className="bpd-sidebar-label">Tools</div>
+                <div className="bpd-sidebar-tools">
+                  {blueprint.tools.map(t => <span key={t} className="bpd-sidebar-tool">{t}</span>)}
+                </div>
+              </div>
+
+              {blueprint.tier !== "free" && (
+                <div className="bpd-sidebar-section">
+                  <div className="bpd-sidebar-label">Price</div>
+                  <span className="bpd-sidebar-value">{blueprint.price} EUR</span>
+                </div>
               )}
-              <a
-                href={`https://cal.com/${CAL_LINK}`}
-                target="_blank"
-                rel="noreferrer"
-                className="bpd-btn bpd-btn-secondary"
-              >
-                Have us set it up for you &rarr;
-              </a>
+
+              <div className="bpd-sidebar-actions">
+                {blueprint.tier === "free" ? (
+                  <a href={blueprint.file || "#"} className="bpd-btn bpd-btn-primary" download>
+                    Download blueprint
+                  </a>
+                ) : (
+                  <a href="https://buy.stripe.com/test_8x2cN7csggyj5qmf8new800" target="_blank" rel="noreferrer" className="bpd-btn bpd-btn-primary">
+                    Buy blueprint
+                  </a>
+                )}
+                <a
+                  href={`https://cal.com/${CAL_LINK}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="bpd-btn bpd-btn-secondary"
+                >
+                  Have us set it up for you &rarr;
+                </a>
+              </div>
             </div>
-          </div>
-        </aside>
+          </aside>
+        </div>
       </div>
-    </div>
+
+    </>
   );
 }
